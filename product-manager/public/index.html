@@ -29,7 +29,9 @@
     .code { font-family: ui-monospace, monospace; font-weight: 500; }
     .actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
     #loading { margin: 1rem 0; color: #9ca3af; }
-    .pagination { display: flex; align-items: center; gap: 0.75rem; margin-top: 1rem; flex-wrap: wrap; }
+    .pagination { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+    .pagination-top { margin-bottom: 0.75rem; }
+    .pagination-bottom { margin-top: 1rem; }
     .pagination button { background: #3e4248; color: #e4e6eb; padding: 0.4rem 0.75rem; }
     .pagination button:hover:not(:disabled) { background: #4b5563; }
     .pagination button:disabled { opacity: 0.5; cursor: not-allowed; }
@@ -42,13 +44,28 @@
   <h1>Upgates Product Manager</h1>
   <div class="toolbar">
     <div class="filter-wrap">
-      <label for="filter">Filtr (kód, název):</label>
-      <input type="text" id="filter" placeholder="PS600, Pilot…">
+      <label for="filterCodes">Kódy (codes):</label>
+      <input type="text" id="filterCodes" placeholder="PS600; PS601 nebo PS600, PS601">
     </div>
     <button type="button" class="btn-refresh" id="refresh">Načíst produkty</button>
     <span class="status" id="status"></span>
   </div>
   <div id="loading" style="display:none;">Načítám…</div>
+  <div class="pagination pagination-top" id="paginationTop" style="display:none;">
+    <button type="button" class="btn-prev">← Předchozí</button>
+    <span class="page-info"></span>
+    <button type="button" class="btn-next">Další (stránka <span class="next-page-num">2</span>)</button>
+    <div class="limit-wrap">
+      <label>Na stránku:</label>
+      <select class="limit-select">
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+        <option value="5000" selected>5000</option>
+      </select>
+    </div>
+  </div>
   <table id="table" style="display:none;">
     <thead>
       <tr>
@@ -61,38 +78,35 @@
     <tbody id="tbody"></tbody>
   </table>
   <p id="empty" style="display:none; color: #9ca3af;">Žádné produkty nebo nic nevyhovuje filtru.</p>
-  <div class="pagination" id="pagination" style="display:none;">
-    <button type="button" id="btnPrev">← Předchozí</button>
-    <span class="page-info" id="pageInfo"></span>
-    <button type="button" id="btnNext">Další →</button>
+  <div class="pagination pagination-bottom" id="paginationBottom" style="display:none;">
+    <button type="button" class="btn-prev">← Předchozí</button>
+    <span class="page-info"></span>
+    <button type="button" class="btn-next">Další (stránka <span class="next-page-num">2</span>)</button>
     <div class="limit-wrap">
-      <label for="limit">Na stránku:</label>
-      <select id="limit">
+      <label>Na stránku:</label>
+      <select class="limit-select">
         <option value="10">10</option>
-        <option value="20" selected>20</option>
+        <option value="20">20</option>
         <option value="50">50</option>
         <option value="100">100</option>
+        <option value="5000" selected>5000</option>
       </select>
     </div>
   </div>
 
   <script>
-    const filterEl = document.getElementById('filter');
+    const filterCodesEl = document.getElementById('filterCodes');
     const refreshBtn = document.getElementById('refresh');
     const statusEl = document.getElementById('status');
     const loadingEl = document.getElementById('loading');
     const tableEl = document.getElementById('table');
     const tbody = document.getElementById('tbody');
     const emptyEl = document.getElementById('empty');
-    const paginationEl = document.getElementById('pagination');
-    const btnPrev = document.getElementById('btnPrev');
-    const btnNext = document.getElementById('btnNext');
-    const pageInfoEl = document.getElementById('pageInfo');
-    const limitEl = document.getElementById('limit');
+    const paginationTopEl = document.getElementById('paginationTop');
+    const paginationBottomEl = document.getElementById('paginationBottom');
+    const limitSelects = document.querySelectorAll('.limit-select');
 
     let currentPage = 1;
-    let totalPages = 1;
-    let totalProducts = 0;
 
     function setStatus(msg, type = '') {
       statusEl.textContent = msg;
@@ -109,12 +123,14 @@
       if (!list.length) {
         tableEl.style.display = 'none';
         emptyEl.style.display = 'block';
-        paginationEl.style.display = 'none';
+        paginationTopEl.style.display = 'none';
+        paginationBottomEl.style.display = 'none';
         return;
       }
       tableEl.style.display = 'table';
       emptyEl.style.display = 'none';
-      paginationEl.style.display = 'flex';
+      paginationTopEl.style.display = 'flex';
+      paginationBottomEl.style.display = 'flex';
       list.forEach(p => {
         const id = p.product_id ?? p.id ?? '—';
         const tr = document.createElement('tr');
@@ -145,39 +161,63 @@
     }
 
     function updatePagination(data) {
-      const { page, limit, total, totalPages: tp } = data;
+      const page = Number(data?.page) || 1;
+      const total = Number(data?.total) ?? 0;
       currentPage = page;
-      totalPages = tp;
-      totalProducts = total;
-      pageInfoEl.textContent = `Stránka ${page} z ${tp} (celkem ${total} produktů)`;
-      btnPrev.disabled = page <= 1;
-      btnNext.disabled = page >= tp;
+      document.querySelectorAll('.page-info').forEach(el => {
+        el.textContent = `Stránka ${page}${total ? ` (celkem ${total} produktů)` : ''}`;
+      });
+      document.querySelectorAll('.btn-prev').forEach(el => { el.disabled = page <= 1; });
+      document.querySelectorAll('.btn-next').forEach(el => { el.disabled = false; });
+      document.querySelectorAll('.next-page-num').forEach(el => { el.textContent = String(page + 1); });
     }
 
     async function loadProducts(page = 1) {
       loadingEl.style.display = 'block';
       setStatus('');
-      const q = (filterEl.value || '').trim();
-      const limit = parseInt(limitEl.value, 10) || 20;
+      const codes = (filterCodesEl.value || '').trim();
+      const limitEl = limitSelects[0];
+      const limit = parseInt(limitEl.value, 10) || 5000;
       const params = new URLSearchParams({ page: String(page), limit: String(limit) });
-      if (q) params.set('q', q);
+      if (codes) params.set('codes', codes);
+      const queryString = params.toString();
+      const apiUrl = window.location.origin + '/api/products?' + queryString;
+      params.set('_', String(Date.now()));
+      const fetchUrl = window.location.origin + '/api/products?' + params.toString();
       try {
-        const r = await fetch('/api/products?' + params.toString());
+        const r = await fetch(fetchUrl, { cache: 'no-store' });
         if (!r.ok) {
           const err = await r.json().catch(() => ({}));
-          throw new Error(err.error || r.statusText || 'Chyba načtení');
+          const msg = typeof err.error === 'string' ? err.error : (err.error?.messages ? err.error.messages.join('; ') : (err.error ? JSON.stringify(err.error) : r.statusText));
+          throw new Error(msg || 'Chyba načtení');
         }
-        const data = await r.json();
-        const list = data.items || [];
+        const raw = await r.json();
+        const isPaginated = raw && typeof raw.total === 'number' && Array.isArray(raw.items);
+        const list = isPaginated ? raw.items : (Array.isArray(raw) ? raw : []);
+        const data = isPaginated ? raw : {
+          items: list,
+          total: list.length,
+          page: 1,
+          limit: list.length || 20,
+          totalPages: 1,
+        };
         renderRows(list);
         updatePagination(data);
-        const from = (data.page - 1) * data.limit + 1;
-        const to = from + list.length - 1;
-        setStatus(`Zobrazeno ${from}–${to} z ${data.total} produktů.`, 'success');
+        const total = Number(data.total) || 0;
+        const pageNum = Number(data.page) || 1;
+        const limitNum = Number(data.limit) || 20;
+        const from = total === 0 ? 0 : (pageNum - 1) * limitNum + 1;
+        const to = total === 0 ? 0 : Math.min(from + list.length - 1, total);
+        const filterStr = codes ? ` Kódy: ${codes}.` : '';
+        const upstream = raw.upstream_url ? ` Voláno: ${raw.upstream_url}` : '';
+        const msg = raw.message ? ` ${raw.message}` : '';
+        setStatus(`Zobrazeno ${from}–${to} z ${total} produktů.${filterStr}${upstream}${msg}`, 'success');
       } catch (e) {
-        setStatus(e.message || 'Chyba', 'error');
+        const errMsg = typeof e.message === 'string' ? e.message : (e.message ? JSON.stringify(e.message) : 'Chyba');
+        setStatus(errMsg, 'error');
         renderRows([]);
-        paginationEl.style.display = 'none';
+        paginationTopEl.style.display = 'none';
+        paginationBottomEl.style.display = 'none';
       } finally {
         loadingEl.style.display = 'none';
       }
@@ -215,21 +255,33 @@
         });
         if (!r.ok) {
           const err = await r.json().catch(() => ({}));
-          throw new Error(err.error || r.statusText || 'Chyba nahrání');
+          const msg = typeof err.error === 'string' ? err.error : (err.error?.messages ? err.error.messages.join('; ') : (err.error ? JSON.stringify(err.error) : r.statusText));
+          throw new Error(msg || 'Chyba nahrání');
         }
         setStatus('Import dokončen. Obnovte seznam.', 'success');
         ev.target.value = '';
       } catch (e) {
-        setStatus(e.message || 'Import selhal', 'error');
+        setStatus(typeof e.message === 'string' ? e.message : 'Import selhal', 'error');
         ev.target.value = '';
       }
     }
 
     refreshBtn.addEventListener('click', () => loadProducts(1));
-    filterEl.addEventListener('keydown', (e) => { if (e.key === 'Enter') loadProducts(1); });
-    btnPrev.addEventListener('click', () => loadProducts(Math.max(1, currentPage - 1)));
-    btnNext.addEventListener('click', () => loadProducts(Math.min(totalPages, currentPage + 1)));
-    limitEl.addEventListener('change', () => loadProducts(1));
+    filterCodesEl.addEventListener('keydown', (e) => { if (e.key === 'Enter') loadProducts(1); });
+
+    document.querySelectorAll('.btn-prev').forEach(btn => {
+      btn.addEventListener('click', () => loadProducts(Math.max(1, currentPage - 1)));
+    });
+    document.querySelectorAll('.btn-next').forEach(btn => {
+      btn.addEventListener('click', () => loadProducts(currentPage + 1));
+    });
+    limitSelects.forEach(sel => {
+      sel.addEventListener('change', () => {
+        const v = sel.value;
+        limitSelects.forEach(s => { if (s !== sel) s.value = v; });
+        loadProducts(1);
+      });
+    });
 
     loadProducts(1);
   </script>

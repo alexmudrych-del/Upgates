@@ -73,42 +73,61 @@ function apiUrl() {
   return loadCredentials().api_url.replace(/\/$/, '');
 }
 
-function getProductTitle(p) {
-  const d = (p.descriptions || [])[0];
-  return (d && d.title) || p.code || '';
+function formatApiError(body, fallback) {
+  if (body == null) return fallback;
+  if (typeof body === 'string') return body;
+  if (Array.isArray(body.messages)) {
+    const parts = body.messages.map((m) =>
+      typeof m === 'object' && m !== null ? (m.message || m.text || m.error || JSON.stringify(m)) : String(m)
+    );
+    return parts.length ? parts.join('; ') : fallback;
+  }
+  if (typeof body.message === 'string') return body.message;
+  if (typeof body.error === 'string') return body.error;
+  return fallback || JSON.stringify(body);
 }
 
-function filterProducts(list, query) {
-  const title = (query.title || '').trim().toLowerCase();
-  const code = (query.code || '').trim().toLowerCase();
-  const q = (query.q || '').trim().toLowerCase();
-  if (!title && !code && !q) return list;
-  return list.filter((p) => {
-    const pTitle = getProductTitle(p).toLowerCase();
-    const pCode = (p.code || '').toLowerCase();
-    const matchTitle = !title || pTitle.includes(title);
-    const matchCode = !code || pCode.includes(code);
-    const matchQ = !q || pTitle.includes(q) || pCode.includes(q);
-    return matchTitle && matchCode && matchQ;
-  });
+// Base URL pro endpoint /products/code – správný formát: https://airteam.admin.s7.upgates.com/api/v2/products/code?codes=PS600;PS601
+function productsCodeBaseUrl() {
+  const creds = loadCredentials();
+  return (creds.api_url_products_code || creds.api_url || apiUrl()).replace(/\/$/, '');
 }
 
-// Seznam produktů – podpora filtrů (title, code, q) a stránkování (page, limit)
-// GET /api/products?title=...&code=...&q=...&page=1&limit=20
+// Seznam produktů – endpoint Upgates: GET .../products/code?codes=PS600;PS601 (oddělovač je středník)
+// GET /api/products?codes=PS600,PS601&page=1&limit=20 (uživatel může psát čárku, do Upgates jde středník)
 app.get('/api/products', async (req, res) => {
   try {
-    const base = apiUrl();
-    const data = await request('GET', `${base}/products`);
-    let list = Array.isArray(data) ? data : (data && (data.data || data.products)) || [];
-    list = Array.isArray(list) ? list : [];
-
-    const title = (req.query.title ?? '').trim();
-    const code = (req.query.code ?? '').trim();
-    const q = (req.query.q ?? '').trim();
+    const base = productsCodeBaseUrl();
+    const codesRaw = (req.query.codes ?? '').trim();
+    const codesParam = codesRaw
+      ? codesRaw.split(/[,;]/).map((c) => c.trim()).filter(Boolean).join(';')
+      : '';
     const page = Math.max(1, parseInt(req.query.page, 10) || 1);
-    const limit = Math.min(100, Math.max(1, parseInt(req.query.limit, 10) || 20));
+    const limit = Math.min(5000, Math.max(1, parseInt(req.query.limit, 10) || 5000));
 
-    list = filterProducts(list, { title, code, q });
+    if (!codesParam) {
+      const totalPages = 1;
+      return res.json({
+        items: [],
+        total: 0,
+        page: 1,
+        limit,
+        totalPages,
+        upstream_url: null,
+        message: 'Zadejte alespoň jeden kód (codes). Používá se endpoint /products/code?codes=PS600;PS601',
+      });
+    }
+
+    const upgatesUrl = `${base}/products/code?codes=${codesParam}`;
+    console.log('[products] req.query.codes=', req.query.codes, '→ Upgates:', upgatesUrl);
+    const data = await request('GET', upgatesUrl);
+    let list = Array.isArray(data) ? data : null;
+    if (!list && data && typeof data === 'object') {
+      list = data.data ?? data.products ?? data.items ?? null;
+      if (list && !Array.isArray(list) && typeof list === 'object' && list.items) list = list.items;
+    }
+    if (!Array.isArray(list)) list = [];
+
     const total = list.length;
     const totalPages = Math.max(1, Math.ceil(total / limit));
     const pageIndex = Math.min(page, totalPages);
@@ -121,20 +140,27 @@ app.get('/api/products', async (req, res) => {
       page: pageIndex,
       limit,
       totalPages,
+      upstream_url: upgatesUrl,
     });
   } catch (err) {
     console.error(err);
-    res.status(err.status || 500).json({ error: err.body || err.message || 'Chyba API' });
+    const msg = formatApiError(err.body, err.message || 'Chyba API');
+    res.status(err.status || 500).json({ error: msg });
   }
 });
 
-// Detail produktu podle kódu (pro export)
+// Detail produktu podle kódu (pro export) – stejný endpoint, parametr codes s jedním kódem
 app.get('/api/products/by-code/:code', async (req, res) => {
   try {
-    const base = apiUrl();
-    const code = encodeURIComponent(req.params.code);
-    const data = await request('GET', `${base}/products?code=${code}`);
-    const list = Array.isArray(data) ? data : (data && (data.data || data.products)) || [];
+    const base = productsCodeBaseUrl();
+    const code = (req.params.code || '').trim();
+    const codesParam = code || '';
+    const upgatesQuery = new URLSearchParams();
+    if (codesParam) upgatesQuery.set('codes', codesParam);
+    const upgatesUrl = `${base}/products/code${upgatesQuery.toString() ? '?' + upgatesQuery.toString() : ''}`;
+    const data = await request('GET', upgatesUrl);
+    let list = Array.isArray(data) ? data : (data && (data.data || data.products)) || [];
+    if (!Array.isArray(list)) list = [];
     const product = list[0] || null;
     if (!product) {
       return res.status(404).json({ error: 'Produkt nenalezen' });
@@ -142,11 +168,12 @@ app.get('/api/products/by-code/:code', async (req, res) => {
     res.json(product);
   } catch (err) {
     console.error(err);
-    res.status(err.status || 500).json({ error: err.body || err.message || 'Chyba API' });
+    const msg = formatApiError(err.body, err.message || 'Chyba API');
+    res.status(err.status || 500).json({ error: msg });
   }
 });
 
-// Aktualizace produktu (import JSON)
+// Aktualizace produktu (import JSON) – formát dle upload_product.ps1: PUT /products s payload { products: [ { product_id, code, descriptions } ] }
 app.put('/api/products/:id', async (req, res) => {
   try {
     const base = apiUrl();
@@ -155,11 +182,21 @@ app.put('/api/products/:id', async (req, res) => {
     if (!body || typeof body !== 'object') {
       return res.status(400).json({ error: 'Očekáván JSON objekt' });
     }
-    await request('PUT', `${base}/products/${id}`, body);
-    res.json({ ok: true, id });
+    const productId = body.product_id ?? body.id ?? id;
+    const code = body.code;
+    const descriptions = body.descriptions;
+    if (!Array.isArray(descriptions)) {
+      return res.status(400).json({ error: 'V JSON chybí pole descriptions (pole objektů).' });
+    }
+    const payload = {
+      products: [{ product_id: productId, code: code || String(id), descriptions }],
+    };
+    await request('PUT', `${base}/products`, payload);
+    res.json({ ok: true, id: productId });
   } catch (err) {
     console.error(err);
-    res.status(err.status || 500).json({ error: err.body || err.message || 'Chyba API' });
+    const msg = formatApiError(err.body, err.message || 'Chyba API');
+    res.status(err.status || 500).json({ error: msg });
   }
 });
 
