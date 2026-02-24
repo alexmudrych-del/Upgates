@@ -31,6 +31,7 @@ Backend volá pouze tyto endpointy.
 |--------|-----|--------|
 | GET | `{api_url}/products/code?codes=...` | Seznam produktů podle kódů. Parametr `codes`: jeden kód nebo více oddělených **středníkem** (např. `PS600` nebo `PS600;PS601`). |
 | PUT | `{api_url}/products` | Aktualizace produktu. Body = `{ "products": [ { "product_id", "code", "descriptions" } ] }`. (Reference: upload_product.ps1) |
+| GET | `{api_url}/categories` | Seznam kategorií (stránky jsou součástí obsahu kategorií). |
 
 **Příklad (správný link):** `https://airteam.admin.s7.upgates.com/api/v2/products/code?codes=PS600;PS601`
 
@@ -146,7 +147,46 @@ Klient
 
 ---
 
-## 6. Rozšíření v budoucnu
+## 6. Stránky (Pages) – poznámka
+
+**Stránky v Upgates jsou součástí obsahu kategorií.** Pro práci se stránkami je třeba použít API kategorií.
+
+- **Reference:** [Seznam kategorií – Upgates API v2](https://upgatesapiv2.docs.apiary.io/#reference/kategorie/kategorie/seznam-kategorii)
+
+---
+
+### 6.1 GET /api/categories
+
+**Účel:** Seznam kategorií (stránky jsou součástí obsahu kategorií) se stránkováním a filtry.
+
+**Chování:**
+
+1. Volá `GET {api_url}/categories` s předanými parametry.
+2. Odpověď normalizuje na pole (podobně jako u produktů).
+3. Aplikuje stránkování podle `page` a `limit`.
+4. Vrátí JSON s `items`, `total`, `page`, `limit`, `totalPages`.
+
+**Query parametry** (předávány do Upgates API):
+
+| Parametr | Typ | Popis |
+|----------|-----|-------|
+| `page` | integer | Číslo stránky. |
+| `limit` | integer | Počet položek na stránku (1–5000). |
+| `codes` | string | Kódy kategorií oddělené čárkou nebo středníkem (do Upgates jde středník). |
+| `parent_id` | integer | ID nadřazené kategorie. |
+| `active_yn` | bool | `true` / `false` – aktivní / neaktivní. |
+| `language` | string | Jazyk (cs, en, sk, …). |
+| `creation_time_from` | date | Pouze kategorie vytvořené od data. |
+| `last_update_time_from` | date | Pouze kategorie změněné od data. |
+| `ids` | string | ID kategorií oddělená středníkem. |
+| `category_id` | integer | ID kategorie. |
+| `exclude_from_search_yn` | bool | Vyřadit z vyhledávání. |
+
+**Odpověď 200:** Stejný formát jako `/api/products` (`items`, `total`, `page`, `limit`, `totalPages`).
+
+---
+
+## 7. Rozšíření v budoucnu
 
 - **Více stránek z Upgates:** Pokud Upgates API podporuje `page`/`offset`/`limit`, předat je do `GET {api_url}/products` a případně sloučit více requestů před aplikací lokálních filtrů.
 - **Další filtry:** Přidat další query parametry a rozšířit `filterProducts()` podle potřeb (např. kategorie, sklad).

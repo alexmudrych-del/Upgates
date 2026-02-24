@@ -173,6 +173,83 @@ app.get('/api/products/by-code/:code', async (req, res) => {
   }
 });
 
+// Seznam kategorií – endpoint Upgates: GET .../categories (stránky jsou součástí obsahu kategorií)
+// Parametry Upgates: codes, code, ids, category_id, parent_id, active_yn, exclude_from_search_yn,
+//   language, creation_time_from, last_update_time_from, page
+app.get('/api/categories', async (req, res) => {
+  try {
+    const base = apiUrl();
+    const page = Math.max(1, parseInt(req.query.page, 10) || 1);
+    const limit = Math.min(5000, Math.max(1, parseInt(req.query.limit, 10) || 20));
+
+    const upgatesParams = new URLSearchParams();
+    upgatesParams.set('page', String(page));
+
+    const codesRaw = (req.query.codes ?? req.query.code ?? '').trim();
+    if (codesRaw) {
+      const codesParam = codesRaw.split(/[,;]/).map((c) => c.trim()).filter(Boolean).join(';');
+      if (codesParam) upgatesParams.set('codes', codesParam);
+    }
+    if (req.query.ids) upgatesParams.set('ids', String(req.query.ids).trim());
+    if (req.query.category_id) upgatesParams.set('category_id', String(req.query.category_id).trim());
+    if (req.query.parent_id !== undefined && req.query.parent_id !== '') upgatesParams.set('parent_id', String(req.query.parent_id).trim());
+    if (req.query.active_yn !== undefined && req.query.active_yn !== '') upgatesParams.set('active_yn', String(req.query.active_yn));
+    if (req.query.exclude_from_search_yn !== undefined && req.query.exclude_from_search_yn !== '') upgatesParams.set('exclude_from_search_yn', String(req.query.exclude_from_search_yn));
+    if (req.query.language) upgatesParams.set('language', String(req.query.language).trim());
+    if (req.query.creation_time_from) upgatesParams.set('creation_time_from', String(req.query.creation_time_from).trim());
+    if (req.query.last_update_time_from) upgatesParams.set('last_update_time_from', String(req.query.last_update_time_from).trim());
+
+    const upgatesUrl = `${base}/categories?${upgatesParams.toString()}`;
+    console.log('[categories] GET', upgatesUrl);
+    const data = await request('GET', upgatesUrl);
+    let list = Array.isArray(data) ? data : null;
+    let totalFromApi = null;
+    if (!list && data && typeof data === 'object') {
+      list = data.data ?? data.categories ?? data.items ?? null;
+      if (list && !Array.isArray(list) && typeof list === 'object' && list.items) list = list.items;
+      totalFromApi = data.total ?? data.total_count ?? data.count ?? null;
+    }
+    if (!Array.isArray(list)) list = [];
+
+    const total = totalFromApi != null ? Number(totalFromApi) : list.length;
+    const totalPages = Math.max(1, Math.ceil(total / limit));
+    const pageIndex = Math.min(page, totalPages);
+    const offset = (pageIndex - 1) * limit;
+    const items = totalFromApi != null ? list : list.slice(offset, offset + limit);
+
+    res.json({
+      items,
+      total,
+      page: pageIndex,
+      limit,
+      totalPages,
+      upstream_url: upgatesUrl,
+    });
+  } catch (err) {
+    console.error(err);
+    const msg = formatApiError(err.body, err.message || 'Chyba API');
+    res.status(err.status || 500).json({ error: msg });
+  }
+});
+
+// Aktualizace kategorie (import JSON)
+app.put('/api/categories/:id', async (req, res) => {
+  try {
+    const base = apiUrl();
+    const id = req.params.id;
+    const body = req.body;
+    if (!body || typeof body !== 'object') {
+      return res.status(400).json({ error: 'Očekáván JSON objekt' });
+    }
+    await request('PUT', `${base}/categories`, body);
+    res.json({ ok: true, id: id });
+  } catch (err) {
+    console.error(err);
+    const msg = formatApiError(err.body, err.message || 'Chyba API');
+    res.status(err.status || 500).json({ error: msg });
+  }
+});
+
 // Aktualizace produktu (import JSON) – formát dle upload_product.ps1: PUT /products s payload { products: [ { product_id, code, descriptions } ] }
 app.put('/api/products/:id', async (req, res) => {
   try {
