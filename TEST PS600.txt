@@ -1,0 +1,2532 @@
+================================================================================
+PRODUKT PS600 – VŠECHNY HODNOTY / OBSAH (Upgates API)
+================================================================================
+
+--- ZÁKLADNÍ ÚDAJE ---
+code: PS600
+product_id: 55889
+active_yn: True
+archived_yn: False
+ean: None
+manufacturer: PilotStyle
+availability: In stock
+stock: 407
+admin_url: https://airteam.admin.s7.upgates.com/manager/products/main/default/55889
+
+--- DESCRIPTIONS (popisy po jazycích) ---
+
+  [Jazyk: en]
+  title: PilotStyle Pilot Logbook
+  short_description: (prázdné)
+  long_description:
+<h3 style="text-align: left; color: #e2ad5d;"><b>Compact Format, Thoughtful Details</b><b></b></h3>
+<p class="p2" style="text-align: justify;">The <span class="s1">lightweight, compact design</span> fits easily into any flight bag while offering generous space for detailed entries. Smartly arranged columns make it easy to total hours by type or duty, while dedicated notes sections capture weather, training remarks, or specific flight details. PilotStyle Logbook combines professional formatting with everyday practicality — simply open, log, and fly.</p>
+  url: https://www.airteam.eu/p/pilotstyle-pilot-logbook
+  seo_title: 
+  seo_description: 
+  seo_url: PilotStyle Pilot Logbook
+  unit: pc
+
+  [Jazyk: cs]
+  title: PilotStyle pilotní zápisník letů
+  short_description: (prázdné)
+  long_description:
+<h3 style="text-align: left; color: #e2ad5d;"><b>Kompaktní, promyšlené detaily</b><b></b></h3>
+<p class="p1" style="text-align: justify;">Lehké a kompaktní provedení se snadno vejde do jakékoli letové tašky, přesto nabízí dostatek prostoru pro detailní zápisy. Chytře uspořádané sloupce usnadňují součty hodin podle typu nebo funkce, vyhrazené sekce pro poznámky pojmou počasí, výcvikové poznatky či specifika letu. <span class="s1">PilotStyle Logbook</span> spojuje profesionální formát s každodenní praktičností – jednoduše otevřete, zapíšete a letíte.</p>
+  url: https://www.airteam.eu/cz/p/pilotstyle-pilotni-zapisnik-letu
+  seo_title: 
+  seo_description: 
+  seo_url: PilotStyle pilotní zápisník letů
+  unit: ks
+
+  [Jazyk: sk]
+  title: Pilot Style pilotní zápisník letů
+  short_description: (prázdné)
+  long_description:
+<h3 style="text-align: left; color: #e2ad5d;"><b>Kompaktní, promyšlené detaily</b><b></b></h3>
+<p class="p1" style="text-align: justify;">Lehké a kompaktní provedení se snadno vejde do jakékoli letové tašky, přesto nabízí dostatek prostoru pro detailní zápisy. Chytře uspořádané sloupce usnadňují součty hodin podle typu nebo funkce, vyhrazené sekce pro poznámky pojmou počasí, výcvikové poznatky či specifika letu. <span class="s1">PilotStyle Logbook</span> spojuje profesionální formát s každodenní praktičností – jednoduše otevřete, zapíšete a letíte.</p>
+  url: https://www.airteam.eu/sk/p/pilotstyle-pilotni-zapisnik-letu
+  seo_title: 
+  seo_description: 
+  seo_url: PilotStyle pilotní zápisník letů
+  unit: ks
+
+  [Jazyk: fr]
+  title: PilotStyle Pilot Logbook
+  short_description: (prázdné)
+  long_description:
+<h3 style="text-align: left; color: #e2ad5d;"><b>Compact Format, Thoughtful Details</b><b></b></h3>
+<p class="p2" style="text-align: justify;">The <span class="s1">lightweight, compact design</span> fits easily into any flight bag while offering generous space for detailed entries. Smartly arranged columns make it easy to total hours by type or duty, while dedicated notes sections capture weather, training remarks, or specific flight details. PilotStyle Logbook combines professional formatting with everyday practicality — simply open, log, and fly.</p>
+  url: https://www.airteam.eu/fr/p/pilotstyle-pilot-logbook
+  seo_title: 
+  seo_description: 
+  seo_url: PilotStyle Pilot Logbook
+  unit: pc
+
+  [Jazyk: it]
+  title: PilotStyle Pilot Logbook
+  short_description: (prázdné)
+  long_description:
+<h3 style="text-align: left; color: #e2ad5d;"><b>Compact Format, Thoughtful Details</b><b></b></h3>
+<p class="p2" style="text-align: justify;">The <span class="s1">lightweight, compact design</span> fits easily into any flight bag while offering generous space for detailed entries. Smartly arranged columns make it easy to total hours by type or duty, while dedicated notes sections capture weather, training remarks, or specific flight details. PilotStyle Logbook combines professional formatting with everyday practicality — simply open, log, and fly.</p>
+  url: https://www.airteam.eu/it/p/pilotstyle-pilot-logbook
+  seo_title: 
+  seo_description: 
+  seo_url: PilotStyle Pilot Logbook
+  unit: pz
+
+  [Jazyk: de]
+  title: PilotStyle Pilot Logbook
+  short_description: (prázdné)
+  long_description:
+<h3 style="text-align: left; color: #e2ad5d;"><b>Compact Format, Thoughtful Details</b><b></b></h3>
+<p class="p2" style="text-align: justify;">The <span class="s1">lightweight, compact design</span> fits easily into any flight bag while offering generous space for detailed entries. Smartly arranged columns make it easy to total hours by type or duty, while dedicated notes sections capture weather, training remarks, or specific flight details. PilotStyle Logbook combines professional formatting with everyday practicality — simply open, log, and fly.</p>
+  url: https://www.airteam.eu/de/p/pilotstyle-pilot-logbook
+  seo_title: 
+  seo_description: 
+  seo_url: PilotStyle Pilot Logbook
+  unit: St
+
+  [Jazyk: pl]
+  title: PilotStyle Pilot Logbook
+  short_description: (prázdné)
+  long_description:
+<h3 style="text-align: left; color: #e2ad5d;"><b>Compact Format, Thoughtful Details</b><b></b></h3>
+<p class="p2" style="text-align: justify;">The <span class="s1">lightweight, compact design</span> fits easily into any flight bag while offering generous space for detailed entries. Smartly arranged columns make it easy to total hours by type or duty, while dedicated notes sections capture weather, training remarks, or specific flight details. PilotStyle Logbook combines professional formatting with everyday practicality — simply open, log, and fly.</p>
+  url: https://www.airteam.eu/pl/p/pilotstyle-pilot-logbook
+  seo_title: 
+  seo_description: 
+  seo_url: PilotStyle Pilot Logbook
+  unit: sz
+
+  [Jazyk: no]
+  title: PilotStyle Pilot Logbook
+  short_description: (prázdné)
+  long_description:
+<h3 style="text-align: left; color: #e2ad5d;"><b>Compact Format, Thoughtful Details</b><b></b></h3>
+<p class="p2" style="text-align: justify;">The <span class="s1">lightweight, compact design</span> fits easily into any flight bag while offering generous space for detailed entries. Smartly arranged columns make it easy to total hours by type or duty, while dedicated notes sections capture weather, training remarks, or specific flight details. PilotStyle Logbook combines professional formatting with everyday practicality — simply open, log, and fly.</p>
+  url: https://www.airteam.eu/no/p/pilotstyle-pilot-logbook
+  seo_title: 
+  seo_description: 
+  seo_url: PilotStyle Pilot Logbook
+  unit: br
+
+  [Jazyk: ta]
+  title: PilotStyle Pilot Logbook
+  short_description: (prázdné)
+  long_description:
+<h3 style="text-align: left; color: #e2ad5d;"><b>Compact Format, Thoughtful Details</b><b></b></h3>
+<p class="p2" style="text-align: justify;">The <span class="s1">lightweight, compact design</span> fits easily into any flight bag while offering generous space for detailed entries. Smartly arranged columns make it easy to total hours by type or duty, while dedicated notes sections capture weather, training remarks, or specific flight details. PilotStyle Logbook combines professional formatting with everyday practicality — simply open, log, and fly.</p>
+  url: https://www.airteam.shop/p/pilotstyle-pilot-logbook
+  seo_title: 
+  seo_description: 
+  seo_url: PilotStyle Pilot Logbook
+  unit: pc
+
+  [Jazyk: hu]
+  title: PilotStyle Pilot Logbook
+  short_description: (prázdné)
+  long_description:
+<h3 style="text-align: left; color: #e2ad5d;"><b>Compact Format, Thoughtful Details</b><b></b></h3>
+<p class="p2" style="text-align: justify;">The <span class="s1">lightweight, compact design</span> fits easily into any flight bag while offering generous space for detailed entries. Smartly arranged columns make it easy to total hours by type or duty, while dedicated notes sections capture weather, training remarks, or specific flight details. PilotStyle Logbook combines professional formatting with everyday practicality — simply open, log, and fly.</p>
+  url: https://www.airteam.eu/hu/p/pilotstyle-pilot-logbook
+  seo_title: 
+  seo_description: 
+  seo_url: PilotStyle Pilot Logbook
+  unit: db
+
+  [Jazyk: ru]
+  title: PilotStyle Pilot Logbook
+  short_description: (prázdné)
+  long_description:
+<h3 style="text-align: left; color: #e2ad5d;"><b>Compact Format, Thoughtful Details</b><b></b></h3>
+<p class="p2" style="text-align: justify;">The <span class="s1">lightweight, compact design</span> fits easily into any flight bag while offering generous space for detailed entries. Smartly arranged columns make it easy to total hours by type or duty, while dedicated notes sections capture weather, training remarks, or specific flight details. PilotStyle Logbook combines professional formatting with everyday practicality — simply open, log, and fly.</p>
+  url: https://www.airteam.eu/ru/p/pilotstyle-pilot-logbook
+  seo_title: 
+  seo_description: 
+  seo_url: PilotStyle Pilot Logbook
+  unit: шт
+
+--- SHORT TEXT (souhrn) ---
+PilotStyle Pilot Logbook
+
+--- LONG TEXT (souhrn) ---
+<h3 style="text-align: left; color: #e2ad5d;"><b>Compact Format, Thoughtful Details</b><b></b></h3>
+<p class="p2" style="text-align: justify;">The <span class="s1">lightweight, compact design</span> fits easily into any flight bag while offering generous space for detailed entries. Smartly arranged columns make it easy to total hours by type or duty, while dedicated notes sections capture weather, training remarks, or specific flight details. PilotStyle Logbook combines professional formatting with everyday practicality — simply open, log, and fly.</p>
+
+--- CUSTOM FIELDS (metas) – všechny klíče a hodnoty ---
+
+  [row1_img]
+<p><img src="https://airteam.s7.cdn-upgates.com/q/q68ee134c47bf4-products-description-3.png" width="420" height="420" alt=""></p>
+
+  [row1_text]
+<h3 style="text-align: left; color: #e2ad5d;"><b>Odolný a připravený k archivaci</b><b></b></h3>
+<p class="p1" style="text-align: justify;">Každá stránka je tištěna na prémiovém archivačním papíru, který brání rozpíjení a blednutí inkoustu, takže záznamy zůstávají bezpečné a čitelné po mnoho let. Pevné desky a zesílená vazba ochrání obsah při každodenním používání, tréninkových letech i dlouhých přeletech. Logbook je navržen tak, aby uchoval vaši leteckou historii pro audity, prodlužování oprávnění i osobní milníky. Papír bez kyselin s neutrálním pH zabraňuje žloutnutí v čase – ať píšete kuličkovým, gelovým nebo linerem. Vazba „lay-flat“ umožní pohodlně vyplnit celý rozpis přes obě stránky, praktické číslování a rejstřík zase urychlí dohledání záznamů.</p>
+
+  [row2_img]
+
+
+  [row2_text]
+
+
+  [custom_key_3]
+
+
+  [custom_key_2]
+<p><img src="https://airteam.s7.cdn-upgates.com/v/v68ee13f269e5f-products-banners-4.png" width="100%" height="auto" alt=""></p>
+<h3 style="text-align: left; color: #e2ad5d;">PilotStyle Zápisník Letů</h3>
+<p class="p1" style="text-align: justify;">Mějte svou letovou historii přehledně pod kontrolou. <span class="s1">PilotStyle Zápisník letů</span> je nezbytný nástroj pro studenty, instruktory i profesionální piloty – umožňuje čistě a strukturovaně zapisovat letové hodiny, typy a registrace letadel, role posádky i průběh výcviku. Přehledné členění a logický design dělají ze zápisu rychlou, přesnou a bezproblémovou záležitost – od prvního sóla až po profesní kvalifikace.</p>
+
+  [custom_key_4]
+
+
+  [vlastnosti]
+<p class="p1"><span class="s1"></span></p>
+<ul>
+<li>
+<p class="p1"><span class="s1"><b>Profesionální rozvržení:</b></span> odpovídá standardům leteckého průmyslu pro přehlednou a efektivní evidenci.</p>
+</li>
+<li>
+<p class="p1"><span class="s1"><b>Odolné materiály:</b></span> zesílená vazba a pevné desky pro dlouhodobé používání.</p>
+</li>
+<li>
+<p class="p1"><span class="s1"><b>Archivační papír:</b></span> odolává rozpíjení a blednutí inkoustu, chrání letové záznamy.</p>
+</li>
+<li>
+<p class="p1"><span class="s1"><b>Kompaktní a lehký:</b></span> snadno se vejde do letové tašky.</p>
+</li>
+<li>
+<p class="p1"><span class="s1"><b>Dostatek místa pro psaní:</b></span> pro detailní sledování hodin, typů letadel, rolí i poznámek.</p>
+</li>
+</ul>
+
+  [from_yn]
+(prázdné)
+
+  [name_discount]
+
+
+  [percent_discount]
+(prázdné)
+
+  [cena_se_muze_lisit]
+(prázdné)
+
+  [vprcenovask]
+(prázdné)
+
+  [vprcertprice]
+(prázdné)
+
+  [refvprcert]
+(prázdné)
+
+  [refvprcertform]
+(prázdné)
+
+  [rfq_form]
+
+
+  [tab_included]
+
+
+  [vprczfeed]
+(prázdné)
+
+  [vprdefeed]
+(prázdné)
+
+  [refvprstavy]
+(prázdné)
+
+  [vprenfeed]
+(prázdné)
+
+  [vprfrfeed]
+(prázdné)
+
+  [custom_label_google_merchant]
+(prázdné)
+
+  [categorytext_google_merchant]
+(prázdné)
+
+  [yn_google_merchant]
+False
+
+  [categorytext_heureka]
+(prázdné)
+
+  [vprhufeed]
+(prázdné)
+
+  [vprinstall]
+(prázdné)
+
+  [vpritfeed]
+(prázdné)
+
+  [jinedph]
+(prázdné)
+
+  [moq]
+(prázdné)
+
+  [vprmulitpledisc]
+(prázdné)
+
+  [vprnofeed]
+(prázdné)
+
+  [vprplfeed]
+(prázdné)
+
+  [pohoda_updated]
+(prázdné)
+
+  [pohoda_id]
+(prázdné)
+
+  [pohoda_souvisejici_odkazy]
+(prázdné)
+
+  [vprpouzeen]
+(prázdné)
+
+  [price_group]
+(prázdné)
+
+  [redirect_301]
+
+
+  [seo_text]
+
+
+  [shipping_group]
+(prázdné)
+
+  [sold_in_mlt_of]
+(prázdné)
+
+  [refvprstav2]
+(prázdné)
+
+  [variant_table]
+(prázdné)
+
+  [tabulka_mnozstevnich_slev]
+
+
+  [vprtopovat]
+(prázdné)
+
+  [vprtransiprgr]
+(prázdné)
+
+  [vprinstall_form]
+
+
+  [vprshmotnosti]
+0
+
+  [vprzadnytext]
+0
+
+  [vpryoutube]
+(prázdné)
+
+  [custom_key_1]
+(prázdné)
+
+  [zaruka]
+(prázdné)
+
+  [yn_zbozi_cz]
+(prázdné)
+
+  [productname_zbozi_cz]
+(prázdné)
+
+--- IMAGES ---
+  [0] url: https://airteam.s7.cdn-upgates.com/4/4693c12107eeb5-prod-ps600-2.png
+       main_yn: False, position: 1
+  [1] url: https://airteam.s7.cdn-upgates.com/1/1693c121084aad-prod-ps600-5.png
+       main_yn: False, position: 2
+  [2] url: https://airteam.s7.cdn-upgates.com/d/d693c12108c90f-prod-ps600-3.png
+       main_yn: False, position: 3
+  [3] url: https://airteam.s7.cdn-upgates.com/u/u693c12109366f-prod-ps600-4.png
+       main_yn: False, position: 4
+  [4] url: https://airteam.s7.cdn-upgates.com/x/x693c12109d08d-prod-ps600-6.png
+       main_yn: False, position: 5
+  [5] url: https://airteam.s7.cdn-upgates.com/5/5693c1210a7421-prod-ps600-1-2.png
+       main_yn: True, position: 6
+
+--- PRICES (stručně) ---
+  currency: CZK, language: cs
+    - RetailupGates: price_with_vat=630, price_without_vat=520.66
+    - AIR TEAM Crew: price_with_vat=630, price_without_vat=520.66
+    - CAPTAIN: price_with_vat=630, price_without_vat=520.66
+    - FIRST OFFICER: price_with_vat=630, price_without_vat=520.66
+  currency: EUR, language: de
+    - RetailupGates: price_with_vat=24.49, price_without_vat=20.58
+    - AIR TEAM Crew: price_with_vat=24.49, price_without_vat=20.58
+    - CAPTAIN: price_with_vat=24.49, price_without_vat=20.58
+    - FIRST OFFICER: price_with_vat=24.49, price_without_vat=20.58
+  currency: EUR, language: en
+    - RetailupGates: price_with_vat=24.9, price_without_vat=20.58
+    - AIR TEAM Crew: price_with_vat=24.9, price_without_vat=20.58
+    - CAPTAIN: price_with_vat=24.9, price_without_vat=20.58
+    - FIRST OFFICER: price_with_vat=24.9, price_without_vat=20.58
+  currency: EUR, language: fr
+    - RetailupGates: price_with_vat=24.7, price_without_vat=20.58
+    - AIR TEAM Crew: price_with_vat=24.7, price_without_vat=20.58
+    - CAPTAIN: price_with_vat=24.7, price_without_vat=20.58
+    - FIRST OFFICER: price_with_vat=24.7, price_without_vat=20.58
+  currency: HUF, language: hu
+    - RetailupGates: price_with_vat=10500, price_without_vat=8267.72
+    - AIR TEAM Crew: price_with_vat=10500, price_without_vat=8267.72
+    - CAPTAIN: price_with_vat=10500, price_without_vat=8267.72
+    - FIRST OFFICER: price_with_vat=10500, price_without_vat=8267.72
+  currency: EUR, language: it
+    - RetailupGates: price_with_vat=25.11, price_without_vat=20.58
+    - AIR TEAM Crew: price_with_vat=25.11, price_without_vat=20.58
+    - CAPTAIN: price_with_vat=25.11, price_without_vat=20.58
+    - FIRST OFFICER: price_with_vat=25.11, price_without_vat=20.58
+  currency: EUR, language: no
+    - RetailupGates: price_with_vat=20.58, price_without_vat=20.58
+    - AIR TEAM Crew: price_with_vat=20.58, price_without_vat=20.58
+    - CAPTAIN: price_with_vat=20.58, price_without_vat=20.58
+    - FIRST OFFICER: price_with_vat=20.58, price_without_vat=20.58
+  currency: PLN, language: pl
+    - RetailupGates: price_with_vat=106, price_without_vat=86.18
+    - AIR TEAM Crew: price_with_vat=106, price_without_vat=86.18
+    - CAPTAIN: price_with_vat=106, price_without_vat=86.18
+    - FIRST OFFICER: price_with_vat=106, price_without_vat=86.18
+  currency: USD, language: ru
+    - RetailupGates: price_with_vat=26.62, price_without_vat=22
+    - AIR TEAM Crew: price_with_vat=26.62, price_without_vat=22
+    - CAPTAIN: price_with_vat=26.62, price_without_vat=22
+    - FIRST OFFICER: price_with_vat=26.62, price_without_vat=22
+  currency: EUR, language: sk
+    - RetailupGates: price_with_vat=25.31, price_without_vat=20.58
+    - AIR TEAM Crew: price_with_vat=25.31, price_without_vat=20.58
+    - CAPTAIN: price_with_vat=25.31, price_without_vat=20.58
+    - FIRST OFFICER: price_with_vat=25.31, price_without_vat=20.58
+  currency: USD, language: ta
+    - RetailupGates: price_with_vat=22, price_without_vat=22
+    - AIR TEAM Crew: price_with_vat=22, price_without_vat=22
+    - CAPTAIN: price_with_vat=22, price_without_vat=22
+    - FIRST OFFICER: price_with_vat=22, price_without_vat=22
+
+--- CATEGORIES ---
+  - Gifts for Pilots (code: 1670, main_yn: False)
+  - Logbooks (code: 1676, main_yn: False)
+  - PILOTSTYLE (code: 1782, main_yn: False)
+  - Pilot accessories (code: 1787, main_yn: True)
+
+--- CELÝ JSON ODPOVĚDI (raw) ---
+{
+  "code": "PS600",
+  "product_id": 55889,
+  "action_currently_yn": false,
+  "code_supplier": null,
+  "supplier": null,
+  "ean": null,
+  "active_yn": true,
+  "archived_yn": false,
+  "replacement_product_code": null,
+  "can_add_to_basket_yn": true,
+  "adult_yn": false,
+  "set_yn": false,
+  "in_set_yn": false,
+  "exclude_from_search_yn": false,
+  "descriptions": [
+    {
+      "language": "en",
+      "title": "PilotStyle Pilot Logbook",
+      "short_description": null,
+      "long_description": "<h3 style=\"text-align: left; color: #e2ad5d;\"><b>Compact Format, Thoughtful Details</b><b></b></h3>\r\n<p class=\"p2\" style=\"text-align: justify;\">The <span class=\"s1\">lightweight, compact design</span> fits easily into any flight bag while offering generous space for detailed entries. Smartly arranged columns make it easy to total hours by type or duty, while dedicated notes sections capture weather, training remarks, or specific flight details. PilotStyle Logbook combines professional formatting with everyday practicality — simply open, log, and fly.</p>",
+      "url": "https://www.airteam.eu/p/pilotstyle-pilot-logbook",
+      "seo_title": null,
+      "seo_description": null,
+      "seo_url": "PilotStyle Pilot Logbook",
+      "unit": "pc"
+    },
+    {
+      "language": "cs",
+      "title": "PilotStyle pilotní zápisník letů",
+      "short_description": null,
+      "long_description": "<h3 style=\"text-align: left; color: #e2ad5d;\"><b>Kompaktní, promyšlené detaily</b><b></b></h3>\r\n<p class=\"p1\" style=\"text-align: justify;\">Lehké a kompaktní provedení se snadno vejde do jakékoli letové tašky, přesto nabízí dostatek prostoru pro detailní zápisy. Chytře uspořádané sloupce usnadňují součty hodin podle typu nebo funkce, vyhrazené sekce pro poznámky pojmou počasí, výcvikové poznatky či specifika letu. <span class=\"s1\">PilotStyle Logbook</span> spojuje profesionální formát s každodenní praktičností – jednoduše otevřete, zapíšete a letíte.</p>",
+      "url": "https://www.airteam.eu/cz/p/pilotstyle-pilotni-zapisnik-letu",
+      "seo_title": null,
+      "seo_description": null,
+      "seo_url": "PilotStyle pilotní zápisník letů",
+      "unit": "ks"
+    },
+    {
+      "language": "sk",
+      "title": "Pilot Style pilotní zápisník letů",
+      "short_description": null,
+      "long_description": "<h3 style=\"text-align: left; color: #e2ad5d;\"><b>Kompaktní, promyšlené detaily</b><b></b></h3>\r\n<p class=\"p1\" style=\"text-align: justify;\">Lehké a kompaktní provedení se snadno vejde do jakékoli letové tašky, přesto nabízí dostatek prostoru pro detailní zápisy. Chytře uspořádané sloupce usnadňují součty hodin podle typu nebo funkce, vyhrazené sekce pro poznámky pojmou počasí, výcvikové poznatky či specifika letu. <span class=\"s1\">PilotStyle Logbook</span> spojuje profesionální formát s každodenní praktičností – jednoduše otevřete, zapíšete a letíte.</p>",
+      "url": "https://www.airteam.eu/sk/p/pilotstyle-pilotni-zapisnik-letu",
+      "seo_title": null,
+      "seo_description": null,
+      "seo_url": "PilotStyle pilotní zápisník letů",
+      "unit": "ks"
+    },
+    {
+      "language": "fr",
+      "title": "PilotStyle Pilot Logbook",
+      "short_description": null,
+      "long_description": "<h3 style=\"text-align: left; color: #e2ad5d;\"><b>Compact Format, Thoughtful Details</b><b></b></h3>\r\n<p class=\"p2\" style=\"text-align: justify;\">The <span class=\"s1\">lightweight, compact design</span> fits easily into any flight bag while offering generous space for detailed entries. Smartly arranged columns make it easy to total hours by type or duty, while dedicated notes sections capture weather, training remarks, or specific flight details. PilotStyle Logbook combines professional formatting with everyday practicality — simply open, log, and fly.</p>",
+      "url": "https://www.airteam.eu/fr/p/pilotstyle-pilot-logbook",
+      "seo_title": null,
+      "seo_description": null,
+      "seo_url": "PilotStyle Pilot Logbook",
+      "unit": "pc"
+    },
+    {
+      "language": "it",
+      "title": "PilotStyle Pilot Logbook",
+      "short_description": null,
+      "long_description": "<h3 style=\"text-align: left; color: #e2ad5d;\"><b>Compact Format, Thoughtful Details</b><b></b></h3>\r\n<p class=\"p2\" style=\"text-align: justify;\">The <span class=\"s1\">lightweight, compact design</span> fits easily into any flight bag while offering generous space for detailed entries. Smartly arranged columns make it easy to total hours by type or duty, while dedicated notes sections capture weather, training remarks, or specific flight details. PilotStyle Logbook combines professional formatting with everyday practicality — simply open, log, and fly.</p>",
+      "url": "https://www.airteam.eu/it/p/pilotstyle-pilot-logbook",
+      "seo_title": null,
+      "seo_description": null,
+      "seo_url": "PilotStyle Pilot Logbook",
+      "unit": "pz"
+    },
+    {
+      "language": "de",
+      "title": "PilotStyle Pilot Logbook",
+      "short_description": null,
+      "long_description": "<h3 style=\"text-align: left; color: #e2ad5d;\"><b>Compact Format, Thoughtful Details</b><b></b></h3>\r\n<p class=\"p2\" style=\"text-align: justify;\">The <span class=\"s1\">lightweight, compact design</span> fits easily into any flight bag while offering generous space for detailed entries. Smartly arranged columns make it easy to total hours by type or duty, while dedicated notes sections capture weather, training remarks, or specific flight details. PilotStyle Logbook combines professional formatting with everyday practicality — simply open, log, and fly.</p>",
+      "url": "https://www.airteam.eu/de/p/pilotstyle-pilot-logbook",
+      "seo_title": null,
+      "seo_description": null,
+      "seo_url": "PilotStyle Pilot Logbook",
+      "unit": "St"
+    },
+    {
+      "language": "pl",
+      "title": "PilotStyle Pilot Logbook",
+      "short_description": null,
+      "long_description": "<h3 style=\"text-align: left; color: #e2ad5d;\"><b>Compact Format, Thoughtful Details</b><b></b></h3>\r\n<p class=\"p2\" style=\"text-align: justify;\">The <span class=\"s1\">lightweight, compact design</span> fits easily into any flight bag while offering generous space for detailed entries. Smartly arranged columns make it easy to total hours by type or duty, while dedicated notes sections capture weather, training remarks, or specific flight details. PilotStyle Logbook combines professional formatting with everyday practicality — simply open, log, and fly.</p>",
+      "url": "https://www.airteam.eu/pl/p/pilotstyle-pilot-logbook",
+      "seo_title": null,
+      "seo_description": null,
+      "seo_url": "PilotStyle Pilot Logbook",
+      "unit": "sz"
+    },
+    {
+      "language": "no",
+      "title": "PilotStyle Pilot Logbook",
+      "short_description": null,
+      "long_description": "<h3 style=\"text-align: left; color: #e2ad5d;\"><b>Compact Format, Thoughtful Details</b><b></b></h3>\r\n<p class=\"p2\" style=\"text-align: justify;\">The <span class=\"s1\">lightweight, compact design</span> fits easily into any flight bag while offering generous space for detailed entries. Smartly arranged columns make it easy to total hours by type or duty, while dedicated notes sections capture weather, training remarks, or specific flight details. PilotStyle Logbook combines professional formatting with everyday practicality — simply open, log, and fly.</p>",
+      "url": "https://www.airteam.eu/no/p/pilotstyle-pilot-logbook",
+      "seo_title": null,
+      "seo_description": null,
+      "seo_url": "PilotStyle Pilot Logbook",
+      "unit": "br"
+    },
+    {
+      "language": "ta",
+      "title": "PilotStyle Pilot Logbook",
+      "short_description": null,
+      "long_description": "<h3 style=\"text-align: left; color: #e2ad5d;\"><b>Compact Format, Thoughtful Details</b><b></b></h3>\r\n<p class=\"p2\" style=\"text-align: justify;\">The <span class=\"s1\">lightweight, compact design</span> fits easily into any flight bag while offering generous space for detailed entries. Smartly arranged columns make it easy to total hours by type or duty, while dedicated notes sections capture weather, training remarks, or specific flight details. PilotStyle Logbook combines professional formatting with everyday practicality — simply open, log, and fly.</p>",
+      "url": "https://www.airteam.shop/p/pilotstyle-pilot-logbook",
+      "seo_title": null,
+      "seo_description": null,
+      "seo_url": "PilotStyle Pilot Logbook",
+      "unit": "pc"
+    },
+    {
+      "language": "hu",
+      "title": "PilotStyle Pilot Logbook",
+      "short_description": null,
+      "long_description": "<h3 style=\"text-align: left; color: #e2ad5d;\"><b>Compact Format, Thoughtful Details</b><b></b></h3>\r\n<p class=\"p2\" style=\"text-align: justify;\">The <span class=\"s1\">lightweight, compact design</span> fits easily into any flight bag while offering generous space for detailed entries. Smartly arranged columns make it easy to total hours by type or duty, while dedicated notes sections capture weather, training remarks, or specific flight details. PilotStyle Logbook combines professional formatting with everyday practicality — simply open, log, and fly.</p>",
+      "url": "https://www.airteam.eu/hu/p/pilotstyle-pilot-logbook",
+      "seo_title": null,
+      "seo_description": null,
+      "seo_url": "PilotStyle Pilot Logbook",
+      "unit": "db"
+    },
+    {
+      "language": "ru",
+      "title": "PilotStyle Pilot Logbook",
+      "short_description": null,
+      "long_description": "<h3 style=\"text-align: left; color: #e2ad5d;\"><b>Compact Format, Thoughtful Details</b><b></b></h3>\r\n<p class=\"p2\" style=\"text-align: justify;\">The <span class=\"s1\">lightweight, compact design</span> fits easily into any flight bag while offering generous space for detailed entries. Smartly arranged columns make it easy to total hours by type or duty, while dedicated notes sections capture weather, training remarks, or specific flight details. PilotStyle Logbook combines professional formatting with everyday practicality — simply open, log, and fly.</p>",
+      "url": "https://www.airteam.eu/ru/p/pilotstyle-pilot-logbook",
+      "seo_title": null,
+      "seo_description": null,
+      "seo_url": "PilotStyle Pilot Logbook",
+      "unit": "шт"
+    }
+  ],
+  "manufacturer": "PilotStyle",
+  "stock": 407,
+  "stock_position": null,
+  "availability_id": 2,
+  "availability": "In stock",
+  "availability_type": "InStock",
+  "variants_exists_yn": false,
+  "variants_stock": null,
+  "variants_availability_id": null,
+  "variants_availability": null,
+  "variants_availability_type": null,
+  "limit_orders": null,
+  "weight": 1,
+  "shipment_group": "standard",
+  "images": [
+    {
+      "file_id": 74589,
+      "url": "https://airteam.s7.cdn-upgates.com/4/4693c12107eeb5-prod-ps600-2.png",
+      "main_yn": false,
+      "list_yn": false,
+      "position": 1,
+      "titles": [
+        {
+          "language": "en",
+          "title": "Obrázek (1)"
+        }
+      ]
+    },
+    {
+      "file_id": 74677,
+      "url": "https://airteam.s7.cdn-upgates.com/1/1693c121084aad-prod-ps600-5.png",
+      "main_yn": false,
+      "list_yn": false,
+      "position": 2,
+      "titles": [
+        {
+          "language": "en",
+          "title": "Obrázek (4)"
+        }
+      ]
+    },
+    {
+      "file_id": 74590,
+      "url": "https://airteam.s7.cdn-upgates.com/d/d693c12108c90f-prod-ps600-3.png",
+      "main_yn": false,
+      "list_yn": false,
+      "position": 3,
+      "titles": [
+        {
+          "language": "en",
+          "title": "Obrázek (2)"
+        }
+      ]
+    },
+    {
+      "file_id": 74591,
+      "url": "https://airteam.s7.cdn-upgates.com/u/u693c12109366f-prod-ps600-4.png",
+      "main_yn": false,
+      "list_yn": false,
+      "position": 4,
+      "titles": [
+        {
+          "language": "en",
+          "title": "Obrázek (3)"
+        }
+      ]
+    },
+    {
+      "file_id": 74678,
+      "url": "https://airteam.s7.cdn-upgates.com/x/x693c12109d08d-prod-ps600-6.png",
+      "main_yn": false,
+      "list_yn": false,
+      "position": 5,
+      "titles": [
+        {
+          "language": "en",
+          "title": "Obrázek (5)"
+        }
+      ]
+    },
+    {
+      "file_id": 74811,
+      "url": "https://airteam.s7.cdn-upgates.com/5/5693c1210a7421-prod-ps600-1-2.png",
+      "main_yn": true,
+      "list_yn": true,
+      "position": 6,
+      "titles": [
+        {
+          "language": "en",
+          "title": "Obrázek"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "categories": [
+    {
+      "category_id": 3821,
+      "code": "1670",
+      "main_yn": false,
+      "position": 7,
+      "name": "Gifts for Pilots"
+    },
+    {
+      "category_id": 3827,
+      "code": "1676",
+      "main_yn": false,
+      "position": 1,
+      "name": "Logbooks"
+    },
+    {
+      "category_id": 3956,
+      "code": "1782",
+      "main_yn": false,
+      "position": 41,
+      "name": "PILOTSTYLE"
+    },
+    {
+      "category_id": 3961,
+      "code": "1787",
+      "main_yn": true,
+      "position": 14,
+      "name": "Pilot accessories"
+    }
+  ],
+  "groups": [],
+  "prices": [
+    {
+      "currency": "CZK",
+      "language": "cs",
+      "pricelists": [
+        {
+          "name": "RetailupGates",
+          "price_original": 520.661,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 630,
+          "price_without_vat": 520.66
+        },
+        {
+          "name": "AIR TEAM Crew",
+          "price_original": 520.661,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 630,
+          "price_without_vat": 520.66
+        },
+        {
+          "name": "CAPTAIN",
+          "price_original": 520.661,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 630,
+          "price_without_vat": 520.66
+        },
+        {
+          "name": "FIRST OFFICER",
+          "price_original": 520.661,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 630,
+          "price_without_vat": 520.66
+        }
+      ],
+      "price_purchase": null,
+      "price_common": 0,
+      "vat": 21,
+      "recycling_fee": null
+    },
+    {
+      "currency": "EUR",
+      "language": "de",
+      "pricelists": [
+        {
+          "name": "RetailupGates",
+          "price_original": 20.58,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 24.49,
+          "price_without_vat": 20.58
+        },
+        {
+          "name": "AIR TEAM Crew",
+          "price_original": 20.58,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 24.49,
+          "price_without_vat": 20.58
+        },
+        {
+          "name": "CAPTAIN",
+          "price_original": 20.58,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 24.49,
+          "price_without_vat": 20.58
+        },
+        {
+          "name": "FIRST OFFICER",
+          "price_original": 20.58,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 24.49,
+          "price_without_vat": 20.58
+        }
+      ],
+      "price_purchase": null,
+      "price_common": 0,
+      "vat": 19,
+      "recycling_fee": null
+    },
+    {
+      "currency": "EUR",
+      "language": "en",
+      "pricelists": [
+        {
+          "name": "RetailupGates",
+          "price_original": 20.58,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 24.9,
+          "price_without_vat": 20.58
+        },
+        {
+          "name": "AIR TEAM Crew",
+          "price_original": 20.58,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 24.9,
+          "price_without_vat": 20.58
+        },
+        {
+          "name": "CAPTAIN",
+          "price_original": 20.58,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 24.9,
+          "price_without_vat": 20.58
+        },
+        {
+          "name": "FIRST OFFICER",
+          "price_original": 20.58,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 24.9,
+          "price_without_vat": 20.58
+        }
+      ],
+      "price_purchase": null,
+      "price_common": 0,
+      "vat": 21,
+      "recycling_fee": null
+    },
+    {
+      "currency": "EUR",
+      "language": "fr",
+      "pricelists": [
+        {
+          "name": "RetailupGates",
+          "price_original": 20.58,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 24.7,
+          "price_without_vat": 20.58
+        },
+        {
+          "name": "AIR TEAM Crew",
+          "price_original": 20.58,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 24.7,
+          "price_without_vat": 20.58
+        },
+        {
+          "name": "CAPTAIN",
+          "price_original": 20.58,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 24.7,
+          "price_without_vat": 20.58
+        },
+        {
+          "name": "FIRST OFFICER",
+          "price_original": 20.58,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 24.7,
+          "price_without_vat": 20.58
+        }
+      ],
+      "price_purchase": null,
+      "price_common": 0,
+      "vat": 20,
+      "recycling_fee": null
+    },
+    {
+      "currency": "HUF",
+      "language": "hu",
+      "pricelists": [
+        {
+          "name": "RetailupGates",
+          "price_original": 8267.717,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 10500,
+          "price_without_vat": 8267.72
+        },
+        {
+          "name": "AIR TEAM Crew",
+          "price_original": 8267.717,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 10500,
+          "price_without_vat": 8267.72
+        },
+        {
+          "name": "CAPTAIN",
+          "price_original": 8267.717,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 10500,
+          "price_without_vat": 8267.72
+        },
+        {
+          "name": "FIRST OFFICER",
+          "price_original": 8267.717,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 10500,
+          "price_without_vat": 8267.72
+        }
+      ],
+      "price_purchase": null,
+      "price_common": 0,
+      "vat": 27,
+      "recycling_fee": null
+    },
+    {
+      "currency": "EUR",
+      "language": "it",
+      "pricelists": [
+        {
+          "name": "RetailupGates",
+          "price_original": 20.58,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 25.11,
+          "price_without_vat": 20.58
+        },
+        {
+          "name": "AIR TEAM Crew",
+          "price_original": 20.58,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 25.11,
+          "price_without_vat": 20.58
+        },
+        {
+          "name": "CAPTAIN",
+          "price_original": 20.58,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 25.11,
+          "price_without_vat": 20.58
+        },
+        {
+          "name": "FIRST OFFICER",
+          "price_original": 20.58,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 25.11,
+          "price_without_vat": 20.58
+        }
+      ],
+      "price_purchase": null,
+      "price_common": 0,
+      "vat": 22,
+      "recycling_fee": null
+    },
+    {
+      "currency": "EUR",
+      "language": "no",
+      "pricelists": [
+        {
+          "name": "RetailupGates",
+          "price_original": 20.58,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 20.58,
+          "price_without_vat": 20.58
+        },
+        {
+          "name": "AIR TEAM Crew",
+          "price_original": 20.58,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 20.58,
+          "price_without_vat": 20.58
+        },
+        {
+          "name": "CAPTAIN",
+          "price_original": 20.58,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 20.58,
+          "price_without_vat": 20.58
+        },
+        {
+          "name": "FIRST OFFICER",
+          "price_original": 20.58,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 20.58,
+          "price_without_vat": 20.58
+        }
+      ],
+      "price_purchase": null,
+      "price_common": 0,
+      "vat": 0,
+      "recycling_fee": null
+    },
+    {
+      "currency": "PLN",
+      "language": "pl",
+      "pricelists": [
+        {
+          "name": "RetailupGates",
+          "price_original": 86.179,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 106,
+          "price_without_vat": 86.18
+        },
+        {
+          "name": "AIR TEAM Crew",
+          "price_original": 86.179,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 106,
+          "price_without_vat": 86.18
+        },
+        {
+          "name": "CAPTAIN",
+          "price_original": 86.179,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 106,
+          "price_without_vat": 86.18
+        },
+        {
+          "name": "FIRST OFFICER",
+          "price_original": 86.179,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 106,
+          "price_without_vat": 86.18
+        }
+      ],
+      "price_purchase": null,
+      "price_common": 0,
+      "vat": 23,
+      "recycling_fee": null
+    },
+    {
+      "currency": "USD",
+      "language": "ru",
+      "pricelists": [
+        {
+          "name": "RetailupGates",
+          "price_original": 22,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 26.62,
+          "price_without_vat": 22
+        },
+        {
+          "name": "AIR TEAM Crew",
+          "price_original": 22,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 26.62,
+          "price_without_vat": 22
+        },
+        {
+          "name": "CAPTAIN",
+          "price_original": 22,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 26.62,
+          "price_without_vat": 22
+        },
+        {
+          "name": "FIRST OFFICER",
+          "price_original": 22,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 26.62,
+          "price_without_vat": 22
+        }
+      ],
+      "price_purchase": null,
+      "price_common": 0,
+      "vat": 21,
+      "recycling_fee": null
+    },
+    {
+      "currency": "EUR",
+      "language": "sk",
+      "pricelists": [
+        {
+          "name": "RetailupGates",
+          "price_original": 20.58,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 25.31,
+          "price_without_vat": 20.58
+        },
+        {
+          "name": "AIR TEAM Crew",
+          "price_original": 20.58,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 25.31,
+          "price_without_vat": 20.58
+        },
+        {
+          "name": "CAPTAIN",
+          "price_original": 20.58,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 25.31,
+          "price_without_vat": 20.58
+        },
+        {
+          "name": "FIRST OFFICER",
+          "price_original": 20.58,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 25.31,
+          "price_without_vat": 20.58
+        }
+      ],
+      "price_purchase": null,
+      "price_common": 0,
+      "vat": 23,
+      "recycling_fee": null
+    },
+    {
+      "currency": "USD",
+      "language": "ta",
+      "pricelists": [
+        {
+          "name": "RetailupGates",
+          "price_original": 22,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 22,
+          "price_without_vat": 22
+        },
+        {
+          "name": "AIR TEAM Crew",
+          "price_original": 22,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 22,
+          "price_without_vat": 22
+        },
+        {
+          "name": "CAPTAIN",
+          "price_original": 22,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 22,
+          "price_without_vat": 22
+        },
+        {
+          "name": "FIRST OFFICER",
+          "price_original": 22,
+          "product_discount": null,
+          "product_discount_real": 0,
+          "price_sale": null,
+          "price_with_vat": 22,
+          "price_without_vat": 22
+        }
+      ],
+      "price_purchase": null,
+      "price_common": 0,
+      "vat": 0,
+      "recycling_fee": null
+    }
+  ],
+  "vats": {
+    "cz": 21,
+    "ad": 0,
+    "ae": 0,
+    "af": 0,
+    "ag": 0,
+    "ai": 0,
+    "al": 0,
+    "am": 0,
+    "ao": 0,
+    "aq": 0,
+    "ar": 0,
+    "as": 0,
+    "at": 20,
+    "au": 0,
+    "aw": 0,
+    "ax": 0,
+    "az": 0,
+    "ba": 0,
+    "bb": 0,
+    "bd": 0,
+    "be": 21,
+    "bf": 0,
+    "bg": 20,
+    "bh": 0,
+    "bj": 0,
+    "bl": 0,
+    "bm": 0,
+    "bn": 0,
+    "bo": 0,
+    "bq": 0,
+    "br": 0,
+    "bs": 0,
+    "bt": 0,
+    "bv": 0,
+    "bw": 0,
+    "by": 0,
+    "bz": 0,
+    "ca": 0,
+    "cc": 0,
+    "cf": 0,
+    "ch": 0,
+    "ck": 0,
+    "cl": 0,
+    "cm": 0,
+    "cn": 0,
+    "co": 0,
+    "cr": 0,
+    "cu": 0,
+    "cv": 0,
+    "cw": 0,
+    "cx": 0,
+    "cy": 19,
+    "de": 19,
+    "dj": 0,
+    "dk": 25,
+    "dm": 0,
+    "do": 0,
+    "dz": 0,
+    "ec": 0,
+    "ee": 22,
+    "eg": 0,
+    "eh": 0,
+    "er": 0,
+    "es": 21,
+    "et": 0,
+    "fi": 25.5,
+    "fj": 0,
+    "fk": 0,
+    "fm": 0,
+    "fo": 0,
+    "fr": 20,
+    "ga": 0,
+    "gb": 0,
+    "gd": 0,
+    "ge": 0,
+    "gf": 0,
+    "gg": 0,
+    "gh": 0,
+    "gi": 0,
+    "gl": 0,
+    "gm": 0,
+    "gn": 0,
+    "gp": 0,
+    "gq": 0,
+    "gr": 24,
+    "gs": 0,
+    "gt": 0,
+    "gu": 0,
+    "gw": 0,
+    "gy": 0,
+    "hk": 0,
+    "hm": 0,
+    "hn": 0,
+    "hr": 25,
+    "ht": 0,
+    "hu": 27,
+    "id": 0,
+    "ie": 23,
+    "il": 0,
+    "im": 0,
+    "in": 0,
+    "io": 0,
+    "is": 0,
+    "it": 22,
+    "je": 0,
+    "jm": 0,
+    "jo": 10,
+    "jp": 0,
+    "ke": 0,
+    "kg": 0,
+    "kh": 0,
+    "ki": 0,
+    "km": 0,
+    "kn": 0,
+    "kr": 0,
+    "kw": 0,
+    "ky": 0,
+    "kz": 0,
+    "la": 0,
+    "lc": 0,
+    "li": 0,
+    "lk": 0,
+    "ls": 0,
+    "lt": 21,
+    "lu": 17,
+    "lv": 21,
+    "ma": 0,
+    "mc": 20,
+    "md": 0,
+    "me": 0,
+    "mf": 0,
+    "mg": 0,
+    "mh": 0,
+    "mk": 0,
+    "ml": 0,
+    "mn": 0,
+    "mo": 0,
+    "mp": 0,
+    "mq": 0,
+    "mr": 0,
+    "ms": 0,
+    "mt": 18,
+    "mu": 0,
+    "mv": 0,
+    "mw": 0,
+    "mx": 0,
+    "my": 0,
+    "mz": 0,
+    "na": 0,
+    "nc": 0,
+    "ne": 0,
+    "nf": 0,
+    "ng": 0,
+    "nl": 21,
+    "no": 0,
+    "np": 0,
+    "nr": 0,
+    "nu": 0,
+    "nz": 0,
+    "om": 0,
+    "pa": 0,
+    "pe": 0,
+    "pf": 0,
+    "pg": 0,
+    "ph": 0,
+    "pk": 0,
+    "pl": 23,
+    "pm": 0,
+    "pn": 0,
+    "pr": 0,
+    "ps": 0,
+    "pt": 23,
+    "pw": 0,
+    "py": 0,
+    "qa": 0,
+    "re": 0,
+    "ro": 19,
+    "rs": 0,
+    "rw": 0,
+    "sa": 0,
+    "sb": 0,
+    "sc": 0,
+    "se": 25,
+    "sg": 0,
+    "sh": 0,
+    "si": 22,
+    "sj": 0,
+    "sk": 23,
+    "sl": 0,
+    "sm": 0,
+    "sn": 0,
+    "sr": 0,
+    "st": 0,
+    "sv": 0,
+    "sx": 0,
+    "sz": 0,
+    "tc": 0,
+    "td": 0,
+    "tf": 0,
+    "tg": 0,
+    "th": 0,
+    "tj": 0,
+    "tk": 0,
+    "tl": 0,
+    "tm": 0,
+    "tn": 0,
+    "to": 0,
+    "tr": 0,
+    "tt": 0,
+    "tv": 0,
+    "tw": 0,
+    "tz": 0,
+    "ua": 0,
+    "ug": 0,
+    "um": 0,
+    "us": 0,
+    "uy": 0,
+    "uz": 0,
+    "va": 0,
+    "vc": 0,
+    "vg": 0,
+    "vi": 0,
+    "vn": 0,
+    "vu": 0,
+    "wf": 0,
+    "ws": 0,
+    "yt": 0,
+    "za": 0,
+    "zm": 0
+  },
+  "variants": [],
+  "metas": [
+    {
+      "key": "row1_img",
+      "type": "formatted",
+      "values": {
+        "en": {
+          "language": "en",
+          "value": "<p><img src=\"https://airteam.s7.cdn-upgates.com/q/q68ee134c47bf4-products-description-3.png\" width=\"420\" height=\"420\" alt=\"\"></p>"
+        },
+        "cz": {
+          "language": "cs",
+          "value": "<p><img src=\"https://airteam.s7.cdn-upgates.com/q/q68ee134c47bf4-products-description-3.png\" width=\"420\" height=\"420\" alt=\"\"></p>"
+        },
+        "sk": {
+          "language": "sk",
+          "value": "<p><img src=\"https://airteam.s7.cdn-upgates.com/q/q68ee134c47bf4-products-description-3.png\" width=\"420\" height=\"420\" alt=\"\"></p>"
+        },
+        "fr": {
+          "language": "fr",
+          "value": "<p><img src=\"https://airteam.s7.cdn-upgates.com/q/q68ee134c47bf4-products-description-3.png\" width=\"420\" height=\"420\" alt=\"\"></p>"
+        },
+        "it": {
+          "language": "it",
+          "value": "<p><img src=\"https://airteam.s7.cdn-upgates.com/q/q68ee134c47bf4-products-description-3.png\" width=\"420\" height=\"420\" alt=\"\"></p>"
+        },
+        "de": {
+          "language": "de",
+          "value": "<p><img src=\"https://airteam.s7.cdn-upgates.com/q/q68ee134c47bf4-products-description-3.png\" width=\"420\" height=\"420\" alt=\"\"></p>"
+        },
+        "pl": {
+          "language": "pl",
+          "value": "<p><img src=\"https://airteam.s7.cdn-upgates.com/q/q68ee134c47bf4-products-description-3.png\" width=\"420\" height=\"420\" alt=\"\"></p>"
+        },
+        "no": {
+          "language": "no",
+          "value": "<p><img src=\"https://airteam.s7.cdn-upgates.com/q/q68ee134c47bf4-products-description-3.png\" width=\"420\" height=\"420\" alt=\"\"></p>"
+        },
+        "ta": {
+          "language": "ta",
+          "value": "<p><img src=\"https://airteam.s7.cdn-upgates.com/q/q68ee134c47bf4-products-description-3.png\" width=\"420\" height=\"420\" alt=\"\"></p>"
+        },
+        "hu": {
+          "language": "hu",
+          "value": "<p><img src=\"https://airteam.s7.cdn-upgates.com/q/q68ee134c47bf4-products-description-3.png\" width=\"420\" height=\"420\" alt=\"\"></p>"
+        },
+        "ru": {
+          "language": "ru",
+          "value": "<p><img src=\"https://airteam.s7.cdn-upgates.com/q/q68ee134c47bf4-products-description-3.png\" width=\"420\" height=\"420\" alt=\"\"></p>"
+        }
+      }
+    },
+    {
+      "key": "row1_text",
+      "type": "formatted",
+      "values": {
+        "en": {
+          "language": "en",
+          "value": "<h3 style=\"text-align: left; color: #e2ad5d;\"><b>Built to Last and Archive-Ready</b><b></b></h3>\r\n<p class=\"p1\" style=\"text-align: justify;\">Each page is printed on premium archival-grade paper that prevents ink from smudging or fading, keeping your records safe and legible for years to come. A durable hardcover and reinforced binding protect your entries through everyday use, training flights, and long cross-country missions. Logbook is designed to preserve your aviation history for audits, renewals, and personal milestones. The acid-free, pH-neutral stock helps safeguard entries against yellowing over time, whether you write with ballpoint, gel, or roller pens. A lay-flat binding makes it easy to log times across the entire spread, while practical page numbering and an index section speed up lookups when you need proof, fast.</p>"
+        },
+        "cz": {
+          "language": "cs",
+          "value": "<h3 style=\"text-align: left; color: #e2ad5d;\"><b>Odolný a připravený k archivaci</b><b></b></h3>\r\n<p class=\"p1\" style=\"text-align: justify;\">Každá stránka je tištěna na prémiovém archivačním papíru, který brání rozpíjení a blednutí inkoustu, takže záznamy zůstávají bezpečné a čitelné po mnoho let. Pevné desky a zesílená vazba ochrání obsah při každodenním používání, tréninkových letech i dlouhých přeletech. Logbook je navržen tak, aby uchoval vaši leteckou historii pro audity, prodlužování oprávnění i osobní milníky. Papír bez kyselin s neutrálním pH zabraňuje žloutnutí v čase – ať píšete kuličkovým, gelovým nebo linerem. Vazba „lay-flat“ umožní pohodlně vyplnit celý rozpis přes obě stránky, praktické číslování a rejstřík zase urychlí dohledání záznamů.</p>"
+        },
+        "sk": {
+          "language": "sk",
+          "value": "<h3 style=\"text-align: left; color: #e2ad5d;\"><b>Odolný a připravený k archivaci</b><b></b></h3>\r\n<p class=\"p1\" style=\"text-align: justify;\">Každá stránka je tištěna na prémiovém archivačním papíru, který brání rozpíjení a blednutí inkoustu, takže záznamy zůstávají bezpečné a čitelné po mnoho let. Pevné desky a zesílená vazba ochrání obsah při každodenním používání, tréninkových letech i dlouhých přeletech. Logbook je navržen tak, aby uchoval vaši leteckou historii pro audity, prodlužování oprávnění i osobní milníky. Papír bez kyselin s neutrálním pH zabraňuje žloutnutí v čase – ať píšete kuličkovým, gelovým nebo linerem. Vazba „lay-flat“ umožní pohodlně vyplnit celý rozpis přes obě stránky, praktické číslování a rejstřík zase urychlí dohledání záznamů.</p>"
+        },
+        "fr": {
+          "language": "fr",
+          "value": "<h3 style=\"text-align: left; color: #e2ad5d;\"><b>Built to Last and Archive-Ready</b><b></b></h3>\r\n<p class=\"p1\" style=\"text-align: justify;\">Each page is printed on premium archival-grade paper that prevents ink from smudging or fading, keeping your records safe and legible for years to come. A durable hardcover and reinforced binding protect your entries through everyday use, training flights, and long cross-country missions. Logbook is designed to preserve your aviation history for audits, renewals, and personal milestones. The acid-free, pH-neutral stock helps safeguard entries against yellowing over time, whether you write with ballpoint, gel, or roller pens. A lay-flat binding makes it easy to log times across the entire spread, while practical page numbering and an index section speed up lookups when you need proof, fast.</p>"
+        },
+        "it": {
+          "language": "it",
+          "value": "<h3 style=\"text-align: left; color: #e2ad5d;\"><b>Built to Last and Archive-Ready</b><b></b></h3>\r\n<p class=\"p1\" style=\"text-align: justify;\">Each page is printed on premium archival-grade paper that prevents ink from smudging or fading, keeping your records safe and legible for years to come. A durable hardcover and reinforced binding protect your entries through everyday use, training flights, and long cross-country missions. Logbook is designed to preserve your aviation history for audits, renewals, and personal milestones. The acid-free, pH-neutral stock helps safeguard entries against yellowing over time, whether you write with ballpoint, gel, or roller pens. A lay-flat binding makes it easy to log times across the entire spread, while practical page numbering and an index section speed up lookups when you need proof, fast.</p>"
+        },
+        "de": {
+          "language": "de",
+          "value": "<h3 style=\"text-align: left; color: #e2ad5d;\"><b>Built to Last and Archive-Ready</b><b></b></h3>\r\n<p class=\"p1\" style=\"text-align: justify;\">Each page is printed on premium archival-grade paper that prevents ink from smudging or fading, keeping your records safe and legible for years to come. A durable hardcover and reinforced binding protect your entries through everyday use, training flights, and long cross-country missions. Logbook is designed to preserve your aviation history for audits, renewals, and personal milestones. The acid-free, pH-neutral stock helps safeguard entries against yellowing over time, whether you write with ballpoint, gel, or roller pens. A lay-flat binding makes it easy to log times across the entire spread, while practical page numbering and an index section speed up lookups when you need proof, fast.</p>"
+        },
+        "pl": {
+          "language": "pl",
+          "value": "<h3 style=\"text-align: left; color: #e2ad5d;\"><b>Built to Last and Archive-Ready</b><b></b></h3>\r\n<p class=\"p1\" style=\"text-align: justify;\">Each page is printed on premium archival-grade paper that prevents ink from smudging or fading, keeping your records safe and legible for years to come. A durable hardcover and reinforced binding protect your entries through everyday use, training flights, and long cross-country missions. Logbook is designed to preserve your aviation history for audits, renewals, and personal milestones. The acid-free, pH-neutral stock helps safeguard entries against yellowing over time, whether you write with ballpoint, gel, or roller pens. A lay-flat binding makes it easy to log times across the entire spread, while practical page numbering and an index section speed up lookups when you need proof, fast.</p>"
+        },
+        "no": {
+          "language": "no",
+          "value": "<h3 style=\"text-align: left; color: #e2ad5d;\"><b>Built to Last and Archive-Ready</b><b></b></h3>\r\n<p class=\"p1\" style=\"text-align: justify;\">Each page is printed on premium archival-grade paper that prevents ink from smudging or fading, keeping your records safe and legible for years to come. A durable hardcover and reinforced binding protect your entries through everyday use, training flights, and long cross-country missions. Logbook is designed to preserve your aviation history for audits, renewals, and personal milestones. The acid-free, pH-neutral stock helps safeguard entries against yellowing over time, whether you write with ballpoint, gel, or roller pens. A lay-flat binding makes it easy to log times across the entire spread, while practical page numbering and an index section speed up lookups when you need proof, fast.</p>"
+        },
+        "ta": {
+          "language": "ta",
+          "value": "<h3 style=\"text-align: left; color: #e2ad5d;\"><b>Built to Last and Archive-Ready</b><b></b></h3>\r\n<p class=\"p1\" style=\"text-align: justify;\">Each page is printed on premium archival-grade paper that prevents ink from smudging or fading, keeping your records safe and legible for years to come. A durable hardcover and reinforced binding protect your entries through everyday use, training flights, and long cross-country missions. Logbook is designed to preserve your aviation history for audits, renewals, and personal milestones. The acid-free, pH-neutral stock helps safeguard entries against yellowing over time, whether you write with ballpoint, gel, or roller pens. A lay-flat binding makes it easy to log times across the entire spread, while practical page numbering and an index section speed up lookups when you need proof, fast.</p>"
+        },
+        "hu": {
+          "language": "hu",
+          "value": "<h3 style=\"text-align: left; color: #e2ad5d;\"><b>Built to Last and Archive-Ready</b><b></b></h3>\r\n<p class=\"p1\" style=\"text-align: justify;\">Each page is printed on premium archival-grade paper that prevents ink from smudging or fading, keeping your records safe and legible for years to come. A durable hardcover and reinforced binding protect your entries through everyday use, training flights, and long cross-country missions. Logbook is designed to preserve your aviation history for audits, renewals, and personal milestones. The acid-free, pH-neutral stock helps safeguard entries against yellowing over time, whether you write with ballpoint, gel, or roller pens. A lay-flat binding makes it easy to log times across the entire spread, while practical page numbering and an index section speed up lookups when you need proof, fast.</p>"
+        },
+        "ru": {
+          "language": "ru",
+          "value": "<h3 style=\"text-align: left; color: #e2ad5d;\"><b>Built to Last and Archive-Ready</b><b></b></h3>\r\n<p class=\"p1\" style=\"text-align: justify;\">Each page is printed on premium archival-grade paper that prevents ink from smudging or fading, keeping your records safe and legible for years to come. A durable hardcover and reinforced binding protect your entries through everyday use, training flights, and long cross-country missions. Logbook is designed to preserve your aviation history for audits, renewals, and personal milestones. The acid-free, pH-neutral stock helps safeguard entries against yellowing over time, whether you write with ballpoint, gel, or roller pens. A lay-flat binding makes it easy to log times across the entire spread, while practical page numbering and an index section speed up lookups when you need proof, fast.</p>"
+        }
+      }
+    },
+    {
+      "key": "row2_img",
+      "type": "formatted",
+      "values": {
+        "en": {
+          "language": "en",
+          "value": ""
+        },
+        "cz": {
+          "language": "cs",
+          "value": ""
+        },
+        "sk": {
+          "language": "sk",
+          "value": ""
+        },
+        "fr": {
+          "language": "fr",
+          "value": ""
+        },
+        "it": {
+          "language": "it",
+          "value": ""
+        },
+        "de": {
+          "language": "de",
+          "value": ""
+        },
+        "pl": {
+          "language": "pl",
+          "value": ""
+        },
+        "no": {
+          "language": "no",
+          "value": ""
+        },
+        "ta": {
+          "language": "ta",
+          "value": ""
+        },
+        "hu": {
+          "language": "hu",
+          "value": ""
+        },
+        "ru": {
+          "language": "ru",
+          "value": ""
+        }
+      }
+    },
+    {
+      "key": "row2_text",
+      "type": "formatted",
+      "values": {
+        "en": {
+          "language": "en",
+          "value": ""
+        },
+        "cz": {
+          "language": "cs",
+          "value": ""
+        },
+        "sk": {
+          "language": "sk",
+          "value": ""
+        },
+        "fr": {
+          "language": "fr",
+          "value": ""
+        },
+        "it": {
+          "language": "it",
+          "value": ""
+        },
+        "de": {
+          "language": "de",
+          "value": ""
+        },
+        "pl": {
+          "language": "pl",
+          "value": ""
+        },
+        "no": {
+          "language": "no",
+          "value": ""
+        },
+        "ta": {
+          "language": "ta",
+          "value": ""
+        },
+        "hu": {
+          "language": "hu",
+          "value": ""
+        },
+        "ru": {
+          "language": "ru",
+          "value": ""
+        }
+      }
+    },
+    {
+      "key": "custom_key_3",
+      "type": "formatted",
+      "values": {
+        "en": {
+          "language": "en",
+          "value": ""
+        },
+        "cz": {
+          "language": "cs",
+          "value": ""
+        },
+        "sk": {
+          "language": "sk",
+          "value": ""
+        },
+        "fr": {
+          "language": "fr",
+          "value": ""
+        },
+        "it": {
+          "language": "it",
+          "value": ""
+        },
+        "de": {
+          "language": "de",
+          "value": ""
+        },
+        "pl": {
+          "language": "pl",
+          "value": ""
+        },
+        "no": {
+          "language": "no",
+          "value": ""
+        },
+        "ta": {
+          "language": "ta",
+          "value": ""
+        },
+        "hu": {
+          "language": "hu",
+          "value": ""
+        },
+        "ru": {
+          "language": "ru",
+          "value": ""
+        }
+      }
+    },
+    {
+      "key": "custom_key_2",
+      "type": "formatted",
+      "values": {
+        "en": {
+          "language": "en",
+          "value": "<p><img src=\"https://airteam.s7.cdn-upgates.com/v/v68ee13f269e5f-products-banners-4.png\" width=\"100%\" height=\"auto\" alt=\"\"></p>\r\n<h3 style=\"text-align: left; color: #e2ad5d;\">PilotStyle Pilot Logbook</h3>\r\n<p class=\"p1\" style=\"text-align: justify;\">Keep your flight history organized and under control. The <span class=\"s1\">PilotStyle PS600 Pilot Logbook</span> is an essential tool for students, instructors, and professional pilots alike, allowing you to neatly record flight hours, aircraft types and registrations, crew roles, and training progress. The structured layout and logical design make logging fast, accurate, and effortless — from your first solo to your professional qualifications.</p>"
+        },
+        "cz": {
+          "language": "cs",
+          "value": "<p><img src=\"https://airteam.s7.cdn-upgates.com/v/v68ee13f269e5f-products-banners-4.png\" width=\"100%\" height=\"auto\" alt=\"\"></p>\r\n<h3 style=\"text-align: left; color: #e2ad5d;\">PilotStyle Zápisník Letů</h3>\r\n<p class=\"p1\" style=\"text-align: justify;\">Mějte svou letovou historii přehledně pod kontrolou. <span class=\"s1\">PilotStyle Zápisník letů</span> je nezbytný nástroj pro studenty, instruktory i profesionální piloty – umožňuje čistě a strukturovaně zapisovat letové hodiny, typy a registrace letadel, role posádky i průběh výcviku. Přehledné členění a logický design dělají ze zápisu rychlou, přesnou a bezproblémovou záležitost – od prvního sóla až po profesní kvalifikace.</p>"
+        },
+        "sk": {
+          "language": "sk",
+          "value": "<p><img src=\"https://airteam.s7.cdn-upgates.com/v/v68ee13f269e5f-products-banners-4.png\" width=\"100%\" height=\"auto\" alt=\"\"></p>\r\n<h3 style=\"text-align: left; color: #e2ad5d;\">PilotStyle Zápisník Letů</h3>\r\n<p class=\"p1\" style=\"text-align: justify;\">Mějte svou letovou historii přehledně pod kontrolou. <span class=\"s1\">PilotStyle Zápisník letů</span> je nezbytný nástroj pro studenty, instruktory i profesionální piloty – umožňuje čistě a strukturovaně zapisovat letové hodiny, typy a registrace letadel, role posádky i průběh výcviku. Přehledné členění a logický design dělají ze zápisu rychlou, přesnou a bezproblémovou záležitost – od prvního sóla až po profesní kvalifikace.</p>"
+        },
+        "fr": {
+          "language": "fr",
+          "value": "<p><img src=\"https://airteam.s7.cdn-upgates.com/v/v68ee13f269e5f-products-banners-4.png\" width=\"100%\" height=\"auto\" alt=\"\"></p>\r\n<h3 style=\"text-align: left; color: #e2ad5d;\">PilotStyle Pilot Logbook</h3>\r\n<p class=\"p1\" style=\"text-align: justify;\">Keep your flight history organized and under control. The <span class=\"s1\">PilotStyle PS600 Pilot Logbook</span> is an essential tool for students, instructors, and professional pilots alike, allowing you to neatly record flight hours, aircraft types and registrations, crew roles, and training progress. The structured layout and logical design make logging fast, accurate, and effortless — from your first solo to your professional qualifications.</p>"
+        },
+        "it": {
+          "language": "it",
+          "value": "<p><img src=\"https://airteam.s7.cdn-upgates.com/v/v68ee13f269e5f-products-banners-4.png\" width=\"100%\" height=\"auto\" alt=\"\"></p>\r\n<h3 style=\"text-align: left; color: #e2ad5d;\">PilotStyle Pilot Logbook</h3>\r\n<p class=\"p1\" style=\"text-align: justify;\">Keep your flight history organized and under control. The <span class=\"s1\">PilotStyle PS600 Pilot Logbook</span> is an essential tool for students, instructors, and professional pilots alike, allowing you to neatly record flight hours, aircraft types and registrations, crew roles, and training progress. The structured layout and logical design make logging fast, accurate, and effortless — from your first solo to your professional qualifications.</p>"
+        },
+        "de": {
+          "language": "de",
+          "value": "<p><img src=\"https://airteam.s7.cdn-upgates.com/v/v68ee13f269e5f-products-banners-4.png\" width=\"100%\" height=\"auto\" alt=\"\"></p>\r\n<h3 style=\"text-align: left; color: #e2ad5d;\">PilotStyle Pilot Logbook</h3>\r\n<p class=\"p1\" style=\"text-align: justify;\">Keep your flight history organized and under control. The <span class=\"s1\">PilotStyle PS600 Pilot Logbook</span> is an essential tool for students, instructors, and professional pilots alike, allowing you to neatly record flight hours, aircraft types and registrations, crew roles, and training progress. The structured layout and logical design make logging fast, accurate, and effortless — from your first solo to your professional qualifications.</p>"
+        },
+        "pl": {
+          "language": "pl",
+          "value": "<p><img src=\"https://airteam.s7.cdn-upgates.com/v/v68ee13f269e5f-products-banners-4.png\" width=\"100%\" height=\"auto\" alt=\"\"></p>\r\n<h3 style=\"text-align: left; color: #e2ad5d;\">PilotStyle Pilot Logbook</h3>\r\n<p class=\"p1\" style=\"text-align: justify;\">Keep your flight history organized and under control. The <span class=\"s1\">PilotStyle PS600 Pilot Logbook</span> is an essential tool for students, instructors, and professional pilots alike, allowing you to neatly record flight hours, aircraft types and registrations, crew roles, and training progress. The structured layout and logical design make logging fast, accurate, and effortless — from your first solo to your professional qualifications.</p>"
+        },
+        "no": {
+          "language": "no",
+          "value": "<p><img src=\"https://airteam.s7.cdn-upgates.com/v/v68ee13f269e5f-products-banners-4.png\" width=\"100%\" height=\"auto\" alt=\"\"></p>\r\n<h3 style=\"text-align: left; color: #e2ad5d;\">PilotStyle Pilot Logbook</h3>\r\n<p class=\"p1\" style=\"text-align: justify;\">Keep your flight history organized and under control. The <span class=\"s1\">PilotStyle PS600 Pilot Logbook</span> is an essential tool for students, instructors, and professional pilots alike, allowing you to neatly record flight hours, aircraft types and registrations, crew roles, and training progress. The structured layout and logical design make logging fast, accurate, and effortless — from your first solo to your professional qualifications.</p>"
+        },
+        "ta": {
+          "language": "ta",
+          "value": "<p><img src=\"https://airteam.s7.cdn-upgates.com/v/v68ee13f269e5f-products-banners-4.png\" width=\"100%\" height=\"auto\" alt=\"\"></p>\r\n<h3 style=\"text-align: left; color: #e2ad5d;\">PilotStyle Pilot Logbook</h3>\r\n<p class=\"p1\" style=\"text-align: justify;\">Keep your flight history organized and under control. The <span class=\"s1\">PilotStyle PS600 Pilot Logbook</span> is an essential tool for students, instructors, and professional pilots alike, allowing you to neatly record flight hours, aircraft types and registrations, crew roles, and training progress. The structured layout and logical design make logging fast, accurate, and effortless — from your first solo to your professional qualifications.</p>"
+        },
+        "hu": {
+          "language": "hu",
+          "value": "<p><img src=\"https://airteam.s7.cdn-upgates.com/v/v68ee13f269e5f-products-banners-4.png\" width=\"100%\" height=\"auto\" alt=\"\"></p>\r\n<h3 style=\"text-align: left; color: #e2ad5d;\">PilotStyle Pilot Logbook</h3>\r\n<p class=\"p1\" style=\"text-align: justify;\">Keep your flight history organized and under control. The <span class=\"s1\">PilotStyle PS600 Pilot Logbook</span> is an essential tool for students, instructors, and professional pilots alike, allowing you to neatly record flight hours, aircraft types and registrations, crew roles, and training progress. The structured layout and logical design make logging fast, accurate, and effortless — from your first solo to your professional qualifications.</p>"
+        },
+        "ru": {
+          "language": "ru",
+          "value": "<p><img src=\"https://airteam.s7.cdn-upgates.com/v/v68ee13f269e5f-products-banners-4.png\" width=\"100%\" height=\"auto\" alt=\"\"></p>\r\n<h3 style=\"text-align: left; color: #e2ad5d;\">PilotStyle Pilot Logbook</h3>\r\n<p class=\"p1\" style=\"text-align: justify;\">Keep your flight history organized and under control. The <span class=\"s1\">PilotStyle PS600 Pilot Logbook</span> is an essential tool for students, instructors, and professional pilots alike, allowing you to neatly record flight hours, aircraft types and registrations, crew roles, and training progress. The structured layout and logical design make logging fast, accurate, and effortless — from your first solo to your professional qualifications.</p>"
+        }
+      }
+    },
+    {
+      "key": "custom_key_4",
+      "type": "formatted",
+      "values": {
+        "en": {
+          "language": "en",
+          "value": ""
+        },
+        "cz": {
+          "language": "cs",
+          "value": ""
+        },
+        "sk": {
+          "language": "sk",
+          "value": ""
+        },
+        "fr": {
+          "language": "fr",
+          "value": ""
+        },
+        "it": {
+          "language": "it",
+          "value": ""
+        },
+        "de": {
+          "language": "de",
+          "value": ""
+        },
+        "pl": {
+          "language": "pl",
+          "value": ""
+        },
+        "no": {
+          "language": "no",
+          "value": ""
+        },
+        "ta": {
+          "language": "ta",
+          "value": ""
+        },
+        "hu": {
+          "language": "hu",
+          "value": ""
+        },
+        "ru": {
+          "language": "ru",
+          "value": ""
+        }
+      }
+    },
+    {
+      "key": "vlastnosti",
+      "type": "formatted",
+      "values": {
+        "en": {
+          "language": "en",
+          "value": "<p class=\"p1\"></p>\r\n<ul>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Professional layout:</b></span> Meets aviation industry standards for clear and efficient recordkeeping.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Durable materials:</b></span> Reinforced binding and sturdy covers for long-term use.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Archival paper:</b></span> Resists smudging and fading to protect your flight records.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Compact and lightweight:</b></span> Fits easily into a flight bag.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Ample writing space:</b></span> Allows detailed tracking of hours, aircraft types, roles, and notes.</p>\r\n</li>\r\n</ul>"
+        },
+        "cz": {
+          "language": "cs",
+          "value": "<p class=\"p1\"><span class=\"s1\"></span></p>\r\n<ul>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Profesionální rozvržení:</b></span> odpovídá standardům leteckého průmyslu pro přehlednou a efektivní evidenci.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Odolné materiály:</b></span> zesílená vazba a pevné desky pro dlouhodobé používání.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Archivační papír:</b></span> odolává rozpíjení a blednutí inkoustu, chrání letové záznamy.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Kompaktní a lehký:</b></span> snadno se vejde do letové tašky.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Dostatek místa pro psaní:</b></span> pro detailní sledování hodin, typů letadel, rolí i poznámek.</p>\r\n</li>\r\n</ul>"
+        },
+        "sk": {
+          "language": "sk",
+          "value": "<p class=\"p1\"></p>\r\n<ul>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Profesionální rozvržení:</b></span> odpovídá standardům leteckého průmyslu pro přehlednou a efektivní evidenci.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Odolné materiály:</b></span> zesílená vazba a pevné desky pro dlouhodobé používání.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Archivační papír:</b></span> odolává rozpíjení a blednutí inkoustu, chrání letové záznamy.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Kompaktní a lehký:</b></span> snadno se vejde do letové tašky.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Dostatek místa pro psaní:</b></span> pro detailní sledování hodin, typů letadel, rolí i poznámek.</p>\r\n</li>\r\n</ul>"
+        },
+        "fr": {
+          "language": "fr",
+          "value": "<p class=\"p1\"></p>\r\n<ul>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Professional layout:</b></span> Meets aviation industry standards for clear and efficient recordkeeping.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Durable materials:</b></span> Reinforced binding and sturdy covers for long-term use.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Archival paper:</b></span> Resists smudging and fading to protect your flight records.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Compact and lightweight:</b></span> Fits easily into a flight bag.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Ample writing space:</b></span> Allows detailed tracking of hours, aircraft types, roles, and notes.</p>\r\n</li>\r\n</ul>"
+        },
+        "it": {
+          "language": "it",
+          "value": "<p class=\"p1\"></p>\r\n<ul>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Professional layout:</b></span> Meets aviation industry standards for clear and efficient recordkeeping.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Durable materials:</b></span> Reinforced binding and sturdy covers for long-term use.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Archival paper:</b></span> Resists smudging and fading to protect your flight records.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Compact and lightweight:</b></span> Fits easily into a flight bag.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Ample writing space:</b></span> Allows detailed tracking of hours, aircraft types, roles, and notes.</p>\r\n</li>\r\n</ul>"
+        },
+        "de": {
+          "language": "de",
+          "value": "<p class=\"p1\"></p>\r\n<ul>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Professional layout:</b></span> Meets aviation industry standards for clear and efficient recordkeeping.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Durable materials:</b></span> Reinforced binding and sturdy covers for long-term use.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Archival paper:</b></span> Resists smudging and fading to protect your flight records.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Compact and lightweight:</b></span> Fits easily into a flight bag.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Ample writing space:</b></span> Allows detailed tracking of hours, aircraft types, roles, and notes.</p>\r\n</li>\r\n</ul>"
+        },
+        "pl": {
+          "language": "pl",
+          "value": "<p class=\"p1\"></p>\r\n<ul>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Professional layout:</b></span> Meets aviation industry standards for clear and efficient recordkeeping.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Durable materials:</b></span> Reinforced binding and sturdy covers for long-term use.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Archival paper:</b></span> Resists smudging and fading to protect your flight records.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Compact and lightweight:</b></span> Fits easily into a flight bag.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Ample writing space:</b></span> Allows detailed tracking of hours, aircraft types, roles, and notes.</p>\r\n</li>\r\n</ul>"
+        },
+        "no": {
+          "language": "no",
+          "value": "<p class=\"p1\"></p>\r\n<ul>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Professional layout:</b></span> Meets aviation industry standards for clear and efficient recordkeeping.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Durable materials:</b></span> Reinforced binding and sturdy covers for long-term use.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Archival paper:</b></span> Resists smudging and fading to protect your flight records.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Compact and lightweight:</b></span> Fits easily into a flight bag.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Ample writing space:</b></span> Allows detailed tracking of hours, aircraft types, roles, and notes.</p>\r\n</li>\r\n</ul>"
+        },
+        "ta": {
+          "language": "ta",
+          "value": "<p class=\"p1\"></p>\r\n<ul>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Professional layout:</b></span> Meets aviation industry standards for clear and efficient recordkeeping.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Durable materials:</b></span> Reinforced binding and sturdy covers for long-term use.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Archival paper:</b></span> Resists smudging and fading to protect your flight records.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Compact and lightweight:</b></span> Fits easily into a flight bag.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Ample writing space:</b></span> Allows detailed tracking of hours, aircraft types, roles, and notes.</p>\r\n</li>\r\n</ul>"
+        },
+        "hu": {
+          "language": "hu",
+          "value": "<p class=\"p1\"></p>\r\n<ul>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Professional layout:</b></span> Meets aviation industry standards for clear and efficient recordkeeping.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Durable materials:</b></span> Reinforced binding and sturdy covers for long-term use.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Archival paper:</b></span> Resists smudging and fading to protect your flight records.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Compact and lightweight:</b></span> Fits easily into a flight bag.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Ample writing space:</b></span> Allows detailed tracking of hours, aircraft types, roles, and notes.</p>\r\n</li>\r\n</ul>"
+        },
+        "ru": {
+          "language": "ru",
+          "value": "<p class=\"p1\"></p>\r\n<ul>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Professional layout:</b></span> Meets aviation industry standards for clear and efficient recordkeeping.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Durable materials:</b></span> Reinforced binding and sturdy covers for long-term use.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Archival paper:</b></span> Resists smudging and fading to protect your flight records.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Compact and lightweight:</b></span> Fits easily into a flight bag.</p>\r\n</li>\r\n<li>\r\n<p class=\"p1\"><span class=\"s1\"><b>Ample writing space:</b></span> Allows detailed tracking of hours, aircraft types, roles, and notes.</p>\r\n</li>\r\n</ul>"
+        }
+      }
+    },
+    {
+      "key": "from_yn",
+      "type": "checkbox",
+      "value": false
+    },
+    {
+      "key": "name_discount",
+      "type": "input",
+      "values": {
+        "en": {
+          "language": "en",
+          "value": ""
+        },
+        "cz": {
+          "language": "cs",
+          "value": ""
+        },
+        "sk": {
+          "language": "sk",
+          "value": ""
+        },
+        "fr": {
+          "language": "fr",
+          "value": ""
+        },
+        "it": {
+          "language": "it",
+          "value": ""
+        },
+        "de": {
+          "language": "de",
+          "value": ""
+        },
+        "pl": {
+          "language": "pl",
+          "value": ""
+        },
+        "no": {
+          "language": "no",
+          "value": ""
+        },
+        "ta": {
+          "language": "ta",
+          "value": ""
+        },
+        "hu": {
+          "language": "hu",
+          "value": ""
+        },
+        "ru": {
+          "language": "ru",
+          "value": ""
+        }
+      }
+    },
+    {
+      "key": "percent_discount",
+      "type": "number",
+      "value": ""
+    },
+    {
+      "key": "cena_se_muze_lisit",
+      "type": "checkbox",
+      "value": false
+    },
+    {
+      "key": "vprcenovask",
+      "type": "input",
+      "value": "FIX_MD"
+    },
+    {
+      "key": "vprcertprice",
+      "type": "input",
+      "value": ""
+    },
+    {
+      "key": "refvprcert",
+      "type": "select",
+      "value": "CoC"
+    },
+    {
+      "key": "refvprcertform",
+      "type": "select",
+      "value": ""
+    },
+    {
+      "key": "rfq_form",
+      "type": "textarea",
+      "values": {
+        "en": {
+          "language": "en",
+          "value": ""
+        },
+        "cz": {
+          "language": "cs",
+          "value": ""
+        },
+        "sk": {
+          "language": "sk",
+          "value": ""
+        },
+        "fr": {
+          "language": "fr",
+          "value": ""
+        },
+        "it": {
+          "language": "it",
+          "value": ""
+        },
+        "de": {
+          "language": "de",
+          "value": ""
+        },
+        "pl": {
+          "language": "pl",
+          "value": ""
+        },
+        "no": {
+          "language": "no",
+          "value": ""
+        },
+        "ta": {
+          "language": "ta",
+          "value": ""
+        },
+        "hu": {
+          "language": "hu",
+          "value": ""
+        },
+        "ru": {
+          "language": "ru",
+          "value": ""
+        }
+      }
+    },
+    {
+      "key": "tab_included",
+      "type": "formatted",
+      "values": {
+        "en": {
+          "language": "en",
+          "value": ""
+        },
+        "cz": {
+          "language": "cs",
+          "value": ""
+        },
+        "sk": {
+          "language": "sk",
+          "value": ""
+        },
+        "fr": {
+          "language": "fr",
+          "value": ""
+        },
+        "it": {
+          "language": "it",
+          "value": ""
+        },
+        "de": {
+          "language": "de",
+          "value": ""
+        },
+        "pl": {
+          "language": "pl",
+          "value": ""
+        },
+        "no": {
+          "language": "no",
+          "value": ""
+        },
+        "ta": {
+          "language": "ta",
+          "value": ""
+        },
+        "hu": {
+          "language": "hu",
+          "value": ""
+        },
+        "ru": {
+          "language": "ru",
+          "value": ""
+        }
+      }
+    },
+    {
+      "key": "vprczfeed",
+      "type": "checkbox",
+      "value": true
+    },
+    {
+      "key": "vprdefeed",
+      "type": "checkbox",
+      "value": false
+    },
+    {
+      "key": "refvprstavy",
+      "type": "select",
+      "value": "5 weeks"
+    },
+    {
+      "key": "vprenfeed",
+      "type": "checkbox",
+      "value": true
+    },
+    {
+      "key": "vprfrfeed",
+      "type": "checkbox",
+      "value": false
+    },
+    {
+      "key": "custom_label_google_merchant",
+      "type": "textarea",
+      "value": ""
+    },
+    {
+      "key": "categorytext_google_merchant",
+      "type": "select",
+      "value": ""
+    },
+    {
+      "key": "yn_google_merchant",
+      "type": "checkbox",
+      "values": {
+        "en": {
+          "language": "en",
+          "value": false
+        },
+        "cz": {
+          "language": "cs",
+          "value": false
+        },
+        "sk": {
+          "language": "sk",
+          "value": false
+        },
+        "fr": {
+          "language": "fr",
+          "value": false
+        },
+        "it": {
+          "language": "it",
+          "value": false
+        },
+        "de": {
+          "language": "de",
+          "value": false
+        },
+        "pl": {
+          "language": "pl",
+          "value": false
+        },
+        "no": {
+          "language": "no",
+          "value": false
+        },
+        "ta": {
+          "language": "ta",
+          "value": false
+        },
+        "hu": {
+          "language": "hu",
+          "value": false
+        },
+        "ru": {
+          "language": "ru",
+          "value": false
+        }
+      }
+    },
+    {
+      "key": "categorytext_heureka",
+      "type": "select",
+      "value": ""
+    },
+    {
+      "key": "vprhufeed",
+      "type": "checkbox",
+      "value": false
+    },
+    {
+      "key": "vprinstall",
+      "type": "checkbox",
+      "value": false
+    },
+    {
+      "key": "vpritfeed",
+      "type": "checkbox",
+      "value": false
+    },
+    {
+      "key": "jinedph",
+      "type": "checkbox",
+      "value": false
+    },
+    {
+      "key": "moq",
+      "type": "number",
+      "value": ""
+    },
+    {
+      "key": "vprmulitpledisc",
+      "type": "select",
+      "value": ""
+    },
+    {
+      "key": "vprnofeed",
+      "type": "checkbox",
+      "value": false
+    },
+    {
+      "key": "vprplfeed",
+      "type": "checkbox",
+      "value": true
+    },
+    {
+      "key": "pohoda_updated",
+      "type": "input",
+      "value": ""
+    },
+    {
+      "key": "pohoda_id",
+      "type": "input",
+      "value": "126489"
+    },
+    {
+      "key": "pohoda_souvisejici_odkazy",
+      "type": "textarea",
+      "value": ""
+    },
+    {
+      "key": "vprpouzeen",
+      "type": "checkbox",
+      "value": false
+    },
+    {
+      "key": "price_group",
+      "type": "select",
+      "value": "FIX"
+    },
+    {
+      "key": "redirect_301",
+      "type": "textarea",
+      "values": {
+        "en": {
+          "language": "en",
+          "value": ""
+        },
+        "cz": {
+          "language": "cs",
+          "value": ""
+        },
+        "sk": {
+          "language": "sk",
+          "value": ""
+        },
+        "fr": {
+          "language": "fr",
+          "value": ""
+        },
+        "it": {
+          "language": "it",
+          "value": ""
+        },
+        "de": {
+          "language": "de",
+          "value": ""
+        },
+        "pl": {
+          "language": "pl",
+          "value": ""
+        },
+        "no": {
+          "language": "no",
+          "value": ""
+        },
+        "ta": {
+          "language": "ta",
+          "value": ""
+        },
+        "hu": {
+          "language": "hu",
+          "value": ""
+        },
+        "ru": {
+          "language": "ru",
+          "value": ""
+        }
+      }
+    },
+    {
+      "key": "seo_text",
+      "type": "formatted",
+      "values": {
+        "en": {
+          "language": "en",
+          "value": ""
+        },
+        "cz": {
+          "language": "cs",
+          "value": ""
+        },
+        "sk": {
+          "language": "sk",
+          "value": ""
+        },
+        "fr": {
+          "language": "fr",
+          "value": ""
+        },
+        "it": {
+          "language": "it",
+          "value": ""
+        },
+        "de": {
+          "language": "de",
+          "value": ""
+        },
+        "pl": {
+          "language": "pl",
+          "value": ""
+        },
+        "no": {
+          "language": "no",
+          "value": ""
+        },
+        "ta": {
+          "language": "ta",
+          "value": ""
+        },
+        "hu": {
+          "language": "hu",
+          "value": ""
+        },
+        "ru": {
+          "language": "ru",
+          "value": ""
+        }
+      }
+    },
+    {
+      "key": "shipping_group",
+      "type": "select",
+      "value": "standard"
+    },
+    {
+      "key": "sold_in_mlt_of",
+      "type": "number",
+      "value": ""
+    },
+    {
+      "key": "refvprstav2",
+      "type": "select",
+      "value": "stav_new"
+    },
+    {
+      "key": "variant_table",
+      "type": "checkbox",
+      "value": false
+    },
+    {
+      "key": "tabulka_mnozstevnich_slev",
+      "type": "formatted",
+      "values": {
+        "en": {
+          "language": "en",
+          "value": ""
+        },
+        "cz": {
+          "language": "cs",
+          "value": ""
+        },
+        "sk": {
+          "language": "sk",
+          "value": ""
+        },
+        "fr": {
+          "language": "fr",
+          "value": ""
+        },
+        "it": {
+          "language": "it",
+          "value": ""
+        },
+        "de": {
+          "language": "de",
+          "value": ""
+        },
+        "pl": {
+          "language": "pl",
+          "value": ""
+        },
+        "no": {
+          "language": "no",
+          "value": ""
+        },
+        "ta": {
+          "language": "ta",
+          "value": ""
+        },
+        "hu": {
+          "language": "hu",
+          "value": ""
+        },
+        "ru": {
+          "language": "ru",
+          "value": ""
+        }
+      }
+    },
+    {
+      "key": "vprtopovat",
+      "type": "checkbox",
+      "value": false
+    },
+    {
+      "key": "vprtransiprgr",
+      "type": "checkbox",
+      "value": false
+    },
+    {
+      "key": "vprinstall_form",
+      "type": "textarea",
+      "values": {
+        "en": {
+          "language": "en",
+          "value": ""
+        },
+        "cz": {
+          "language": "cs",
+          "value": ""
+        },
+        "sk": {
+          "language": "sk",
+          "value": ""
+        },
+        "fr": {
+          "language": "fr",
+          "value": ""
+        },
+        "it": {
+          "language": "it",
+          "value": ""
+        },
+        "de": {
+          "language": "de",
+          "value": ""
+        },
+        "pl": {
+          "language": "pl",
+          "value": ""
+        },
+        "no": {
+          "language": "no",
+          "value": ""
+        },
+        "ta": {
+          "language": "ta",
+          "value": ""
+        },
+        "hu": {
+          "language": "hu",
+          "value": ""
+        },
+        "ru": {
+          "language": "ru",
+          "value": ""
+        }
+      }
+    },
+    {
+      "key": "vprshmotnosti",
+      "type": "textarea",
+      "values": {
+        "en": {
+          "language": "en",
+          "value": "0"
+        },
+        "cz": {
+          "language": "cs",
+          "value": ""
+        },
+        "sk": {
+          "language": "sk",
+          "value": ""
+        },
+        "fr": {
+          "language": "fr",
+          "value": ""
+        },
+        "it": {
+          "language": "it",
+          "value": ""
+        },
+        "de": {
+          "language": "de",
+          "value": ""
+        },
+        "pl": {
+          "language": "pl",
+          "value": ""
+        },
+        "no": {
+          "language": "no",
+          "value": ""
+        },
+        "ta": {
+          "language": "ta",
+          "value": ""
+        },
+        "hu": {
+          "language": "hu",
+          "value": ""
+        },
+        "ru": {
+          "language": "ru",
+          "value": ""
+        }
+      }
+    },
+    {
+      "key": "vprzadnytext",
+      "type": "textarea",
+      "values": {
+        "en": {
+          "language": "en",
+          "value": "0"
+        },
+        "cz": {
+          "language": "cs",
+          "value": ""
+        },
+        "sk": {
+          "language": "sk",
+          "value": ""
+        },
+        "fr": {
+          "language": "fr",
+          "value": ""
+        },
+        "it": {
+          "language": "it",
+          "value": ""
+        },
+        "de": {
+          "language": "de",
+          "value": ""
+        },
+        "pl": {
+          "language": "pl",
+          "value": ""
+        },
+        "no": {
+          "language": "no",
+          "value": ""
+        },
+        "ta": {
+          "language": "ta",
+          "value": ""
+        },
+        "hu": {
+          "language": "hu",
+          "value": ""
+        },
+        "ru": {
+          "language": "ru",
+          "value": ""
+        }
+      }
+    },
+    {
+      "key": "vpryoutube",
+      "type": "input",
+      "value": ""
+    },
+    {
+      "key": "custom_key_1",
+      "type": "textarea",
+      "value": ""
+    },
+    {
+      "key": "zaruka",
+      "type": "number",
+      "value": "24"
+    },
+    {
+      "key": "yn_zbozi_cz",
+      "type": "checkbox",
+      "value": false
+    },
+    {
+      "key": "productname_zbozi_cz",
+      "type": "input",
+      "value": "PilotStyle pilotní zápisník letů"
+    }
+  ],
+  "creation_time": "2025-09-22T11:01:07+02:00",
+  "last_update_time": "2026-02-23T17:01:31+01:00",
+  "admin_url": "https://airteam.admin.s7.upgates.com/manager/products/main/default/55889"
+}

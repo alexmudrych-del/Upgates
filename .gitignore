@@ -1,0 +1,4 @@
+# Credentials – neukládat do Gitu
+upgates_credentials.json
+*.env
+.env*

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upgates Product Manager</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 1rem; background: #1a1d23; color: #e4e6eb; }
+    h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .toolbar { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; margin-bottom: 1rem; }
+    .filter-wrap { display: flex; align-items: center; gap: 0.5rem; }
+    input[type="text"] { padding: 0.5rem 0.75rem; border: 1px solid #3e4248; border-radius: 6px; background: #25282e; color: #e4e6eb; min-width: 220px; }
+    button { padding: 0.5rem 0.75rem; border-radius: 6px; border: none; cursor: pointer; font-weight: 500; }
+    .btn-refresh { background: #2d6a4f; color: #fff; }
+    .btn-refresh:hover { background: #40916c; }
+    .btn-export { background: #1e3a5f; color: #90caf9; font-size: 0.875rem; padding: 0.35rem 0.6rem; }
+    .btn-export:hover { background: #2c5282; }
+    .btn-import { background: #5c3d1e; color: #ffcc80; font-size: 0.875rem; padding: 0.35rem 0.6rem; position: relative; }
+    .btn-import:hover { background: #7a5c2e; }
+    .btn-import input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; }
+    .status { font-size: 0.875rem; color: #9ca3af; }
+    .error { color: #f87171; }
+    .success { color: #86efac; }
+    table { width: 100%; border-collapse: collapse; background: #25282e; border-radius: 8px; overflow: hidden; }
+    th, td { padding: 0.6rem 0.75rem; text-align: left; border-bottom: 1px solid #3e4248; }
+    th { background: #2d3139; font-weight: 600; }
+    tr:hover { background: #2d3139; }
+    .code { font-family: ui-monospace, monospace; font-weight: 500; }
+    .actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    #loading { margin: 1rem 0; color: #9ca3af; }
+    .pagination { display: flex; align-items: center; gap: 0.75rem; margin-top: 1rem; flex-wrap: wrap; }
+    .pagination button { background: #3e4248; color: #e4e6eb; padding: 0.4rem 0.75rem; }
+    .pagination button:hover:not(:disabled) { background: #4b5563; }
+    .pagination button:disabled { opacity: 0.5; cursor: not-allowed; }
+    .pagination .page-info { font-size: 0.875rem; color: #9ca3af; }
+    .pagination .limit-wrap { display: flex; align-items: center; gap: 0.35rem; }
+    .pagination select { padding: 0.35rem 0.5rem; border-radius: 6px; background: #25282e; color: #e4e6eb; border: 1px solid #3e4248; }
+  </style>
+</head>
+<body>
+  <h1>Upgates Product Manager</h1>
+  <div class="toolbar">
+    <div class="filter-wrap">
+      <label for="filter">Filtr (kód, název):</label>
+      <input type="text" id="filter" placeholder="PS600, Pilot…">
+    </div>
+    <button type="button" class="btn-refresh" id="refresh">Načíst produkty</button>
+    <span class="status" id="status"></span>
+  </div>
+  <div id="loading" style="display:none;">Načítám…</div>
+  <table id="table" style="display:none;">
+    <thead>
+      <tr>
+        <th>Kód</th>
+        <th>Název / Title</th>
+        <th>ID</th>
+        <th>Akce</th>
+      </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+  <p id="empty" style="display:none; color: #9ca3af;">Žádné produkty nebo nic nevyhovuje filtru.</p>
+  <div class="pagination" id="pagination" style="display:none;">
+    <button type="button" id="btnPrev">← Předchozí</button>
+    <span class="page-info" id="pageInfo"></span>
+    <button type="button" id="btnNext">Další →</button>
+    <div class="limit-wrap">
+      <label for="limit">Na stránku:</label>
+      <select id="limit">
+        <option value="10">10</option>
+        <option value="20" selected>20</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+      </select>
+    </div>
+  </div>
+
+  <script>
+    const filterEl = document.getElementById('filter');
+    const refreshBtn = document.getElementById('refresh');
+    const statusEl = document.getElementById('status');
+    const loadingEl = document.getElementById('loading');
+    const tableEl = document.getElementById('table');
+    const tbody = document.getElementById('tbody');
+    const emptyEl = document.getElementById('empty');
+    const paginationEl = document.getElementById('pagination');
+    const btnPrev = document.getElementById('btnPrev');
+    const btnNext = document.getElementById('btnNext');
+    const pageInfoEl = document.getElementById('pageInfo');
+    const limitEl = document.getElementById('limit');
+
+    let currentPage = 1;
+    let totalPages = 1;
+    let totalProducts = 0;
+
+    function setStatus(msg, type = '') {
+      statusEl.textContent = msg;
+      statusEl.className = 'status ' + type;
+    }
+
+    function getTitle(p) {
+      const d = (p.descriptions || [])[0];
+      return (d && d.title) || p.code || '—';
+    }
+
+    function renderRows(list) {
+      tbody.innerHTML = '';
+      if (!list.length) {
+        tableEl.style.display = 'none';
+        emptyEl.style.display = 'block';
+        paginationEl.style.display = 'none';
+        return;
+      }
+      tableEl.style.display = 'table';
+      emptyEl.style.display = 'none';
+      paginationEl.style.display = 'flex';
+      list.forEach(p => {
+        const id = p.product_id ?? p.id ?? '—';
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td class="code">${escapeHtml(p.code || '—')}</td>
+          <td>${escapeHtml(getTitle(p))}</td>
+          <td>${escapeHtml(String(id))}</td>
+          <td>
+            <div class="actions">
+              <button type="button" class="btn-export" data-code="${escapeHtml(p.code)}">Export JSON</button>
+              <span class="btn-import">
+                <button type="button">Import JSON</button>
+                <input type="file" accept=".json" data-id="${id}" data-code="${escapeHtml(p.code)}">
+              </span>
+            </div>
+          </td>
+        `;
+        tr.querySelector('.btn-export').addEventListener('click', () => exportProduct(p.code));
+        tr.querySelector('input[type="file"]').addEventListener('change', (e) => importProduct(e, id));
+        tbody.appendChild(tr);
+      });
+    }
+
+    function escapeHtml(s) {
+      const div = document.createElement('div');
+      div.textContent = s;
+      return div.innerHTML;
+    }
+
+    function updatePagination(data) {
+      const { page, limit, total, totalPages: tp } = data;
+      currentPage = page;
+      totalPages = tp;
+      totalProducts = total;
+      pageInfoEl.textContent = `Stránka ${page} z ${tp} (celkem ${total} produktů)`;
+      btnPrev.disabled = page <= 1;
+      btnNext.disabled = page >= tp;
+    }
+
+    async function loadProducts(page = 1) {
+      loadingEl.style.display = 'block';
+      setStatus('');
+      const q = (filterEl.value || '').trim();
+      const limit = parseInt(limitEl.value, 10) || 20;
+      const params = new URLSearchParams({ page: String(page), limit: String(limit) });
+      if (q) params.set('q', q);
+      try {
+        const r = await fetch('/api/products?' + params.toString());
+        if (!r.ok) {
+          const err = await r.json().catch(() => ({}));
+          throw new Error(err.error || r.statusText || 'Chyba načtení');
+        }
+        const data = await r.json();
+        const list = data.items || [];
+        renderRows(list);
+        updatePagination(data);
+        const from = (data.page - 1) * data.limit + 1;
+        const to = from + list.length - 1;
+        setStatus(`Zobrazeno ${from}–${to} z ${data.total} produktů.`, 'success');
+      } catch (e) {
+        setStatus(e.message || 'Chyba', 'error');
+        renderRows([]);
+        paginationEl.style.display = 'none';
+      } finally {
+        loadingEl.style.display = 'none';
+      }
+    }
+
+    async function exportProduct(code) {
+      setStatus('Exportuji…');
+      try {
+        const r = await fetch('/api/products/by-code/' + encodeURIComponent(code));
+        if (!r.ok) throw new Error('Produkt nenalezen');
+        const product = await r.json();
+        const blob = new Blob([JSON.stringify(product, null, 2)], { type: 'application/json' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = (code || 'product') + '.json';
+        a.click();
+        URL.revokeObjectURL(a.href);
+        setStatus(`Export: ${code}.json`, 'success');
+      } catch (e) {
+        setStatus(e.message || 'Export selhal', 'error');
+      }
+    }
+
+    async function importProduct(ev, productId) {
+      const file = ev.target.files[0];
+      if (!file) return;
+      setStatus('Nahrávám…');
+      try {
+        const text = await file.text();
+        const body = JSON.parse(text);
+        const r = await fetch('/api/products/' + productId, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body),
+        });
+        if (!r.ok) {
+          const err = await r.json().catch(() => ({}));
+          throw new Error(err.error || r.statusText || 'Chyba nahrání');
+        }
+        setStatus('Import dokončen. Obnovte seznam.', 'success');
+        ev.target.value = '';
+      } catch (e) {
+        setStatus(e.message || 'Import selhal', 'error');
+        ev.target.value = '';
+      }
+    }
+
+    refreshBtn.addEventListener('click', () => loadProducts(1));
+    filterEl.addEventListener('keydown', (e) => { if (e.key === 'Enter') loadProducts(1); });
+    btnPrev.addEventListener('click', () => loadProducts(Math.max(1, currentPage - 1)));
+    btnNext.addEventListener('click', () => loadProducts(Math.min(totalPages, currentPage + 1)));
+    limitEl.addEventListener('change', () => loadProducts(1));
+
+    loadProducts(1);
+  </script>
+</body>
+</html>
