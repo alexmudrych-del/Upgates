@@ -30,7 +30,7 @@ Backend volá pouze tyto endpointy.
 | Metoda | URL | Popis |
 |--------|-----|--------|
 | GET | `{api_url}/products/code?codes=...` | Seznam produktů podle kódů. Parametr `codes`: jeden kód nebo více oddělených **středníkem** (např. `PS600` nebo `PS600;PS601`). |
-| PUT | `{api_url}/products` | Aktualizace produktu. Body = `{ "products": [ { "product_id", "code", "descriptions" } ] }`. (Reference: upload_product.ps1) |
+| PUT | `{api_url}/products` | Aktualizace produktu. Body = `{ "products": [ { "product_id", "code", "descriptions", "metas"? } ] }`. |
 
 **Příklad (správný link):** `https://airteam.admin.s7.upgates.com/api/v2/products/code?codes=PS600;PS601`
 
@@ -101,12 +101,12 @@ Base URL aplikace: `http://localhost:3333` (nebo `process.env.PORT`). Všechny r
 
 **Účel:** Aktualizace produktu v Upgates (import JSON). Formát volání odpovídá referenčnímu skriptu **`upload_product.ps1`**.
 
-**Request:** Body = JSON objekt produktu (např. exportovaný z aplikace). Musí obsahovat alespoň **`descriptions`** (pole); dále se použijí `product_id`/`id` a `code`.
+**Request:** Body = JSON objekt produktu (např. exportovaný z aplikace nebo přeložený Target JSON). Musí obsahovat alespoň **`descriptions`** (pole); dále se použijí `product_id`/`id`, `code` a při přítomnosti i **`metas`** (speciální pole typu row1_text, vlastnosti, …).
 
 **Chování:**
 
 1. Ověří, že body je objekt a má pole `descriptions` (pole).
-2. Sestaví payload dle **upload_product.ps1**: `{ "products": [ { "product_id", "code", "descriptions" } ] }`.
+2. Sestaví payload: `{ "products": [ { "product_id", "code", "descriptions", "metas" (volitelně) } ] }`.
 3. Volá **`PUT {api_url}/products`** (bez :id v path) s tímto payloadem.
 4. Na úspěch vrací `{ "ok": true, "id": "<product_id>" }`.
 
@@ -128,8 +128,8 @@ Klient
     → první prvek → 200 nebo 404
 
 Klient
-    → PUT /api/products/:id + JSON body (produkt s descriptions)
-    → server sestaví { products: [ { product_id, code, descriptions } ] }, PUT {api_url}/products
+    → PUT /api/products/:id + JSON body (produkt s descriptions, volitelně metas)
+    → server sestaví { products: [ { product_id, code, descriptions, metas? } ] }, PUT {api_url}/products
     → 200 { ok, id } nebo chyba
 ```
 

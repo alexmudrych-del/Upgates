@@ -9,10 +9,23 @@ Single-page aplikace: seznam produktů z Upgates API, filtrování, Export JSON 
 
 ## Instalace a spuštění
 
+### Windows
 ```bash
 cd product-manager
 npm install
 npm start
+```
+
+### Mac / Linux
+```bash
+cd product-manager
+npm install
+npm start
+```
+
+Nebo použijte skript:
+```bash
+./start.sh
 ```
 
 Aplikace běží na **http://localhost:3333**.
@@ -30,12 +43,22 @@ Pokud se objeví chyby **TAR_ENTRY_ERROR**, **EBADF**, **EBUSY** nebo **EPERM**:
 
 1. **Projekt na Google Disku / OneDrive** – synchronizace při zápisu do `node_modules` často způsobuje tyto chyby. Nejspolehlivější: zkopíruj projekt do lokální složky (např. `C:\Projects\Upgates`) a tam spusť `npm install` a `npm start`.
 2. **Vyčistit cache a znovu nainstalovat** (v `product-manager`):
+   
+   **Windows:**
    ```bash
    npm cache clean --force
    rmdir /s /q node_modules
    npm install
    ```
-   Před `rmdir` zavři Cursor (nebo aspoň terminál v této složce), aby nic nedrželo složku.
+   
+   **Mac / Linux:**
+   ```bash
+   npm cache clean --force
+   rm -rf node_modules
+   npm install
+   ```
+   
+   Před mazáním `node_modules` zavři Cursor (nebo aspoň terminál v této složce), aby nic nedrželo složku.
 3. **Antivirus** – dočasně vypni real-time skenování pro složku projektu, nebo přidej výjimku pro `node_modules`.
 
 ## Poznámky

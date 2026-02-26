@@ -118,8 +118,12 @@ app.get('/api/products', async (req, res) => {
       });
     }
 
-    const upgatesUrl = `${base}/products/code?codes=${codesParam}`;
-    console.log('[products] req.query.codes=', req.query.codes, '→ Upgates:', upgatesUrl);
+    // Upgates API očekává středník jako literál (ne encodovaný)
+    // Encodujeme pouze jednotlivé kódy, středník zůstane jako literál
+    const codesArray = codesParam.split(';').map(c => c.trim()).filter(Boolean);
+    const encodedCodes = codesArray.map(c => encodeURIComponent(c)).join(';');
+    const upgatesUrl = `${base}/products/code?codes=${encodedCodes}`;
+    console.log('[products] req.query.codes=', req.query.codes, '→ codesParam=', codesParam, '→ codesArray=', codesArray, '→ encodedCodes=', encodedCodes, '→ Upgates:', upgatesUrl);
     const data = await request('GET', upgatesUrl);
     let list = Array.isArray(data) ? data : null;
     if (!list && data && typeof data === 'object') {
@@ -173,7 +177,7 @@ app.get('/api/products/by-code/:code', async (req, res) => {
   }
 });
 
-// Aktualizace produktu (import JSON) – formát dle upload_product.ps1: PUT /products s payload { products: [ { product_id, code, descriptions } ] }
+// Aktualizace produktu (import JSON) – dva PUT požadavky: 1) descriptions, 2) metas (některá API slučují jen odeslaná pole)
 app.put('/api/products/:id', async (req, res) => {
   try {
     const base = apiUrl();
@@ -183,15 +187,25 @@ app.put('/api/products/:id', async (req, res) => {
       return res.status(400).json({ error: 'Očekáván JSON objekt' });
     }
     const productId = body.product_id ?? body.id ?? id;
-    const code = body.code;
+    const code = body.code || String(id);
     const descriptions = body.descriptions;
     if (!Array.isArray(descriptions)) {
       return res.status(400).json({ error: 'V JSON chybí pole descriptions (pole objektů).' });
     }
-    const payload = {
-      products: [{ product_id: productId, code: code || String(id), descriptions }],
-    };
-    await request('PUT', `${base}/products`, payload);
+    const basePayload = { id: productId, product_id: productId, code };
+
+    // 1) PUT jen descriptions – aby se skutečně propisovaly title/short_description/long_description
+    const payloadDescriptions = { products: [{ ...basePayload, descriptions }] };
+    console.log('[PUT /api/products/:id] 1/2 descriptions: productId=', productId, 'count=', descriptions.length);
+    await request('PUT', `${base}/products`, payloadDescriptions);
+
+    // 2) PUT jen metas – row1_text, vlastnosti, atd.
+    if (Array.isArray(body.metas) && body.metas.length > 0) {
+      const payloadMetas = { products: [{ ...basePayload, metas: body.metas }] };
+      console.log('[PUT /api/products/:id] 2/2 metas: count=', body.metas.length);
+      await request('PUT', `${base}/products`, payloadMetas);
+    }
+
     res.json({ ok: true, id: productId });
   } catch (err) {
     console.error(err);
