@@ -232,7 +232,8 @@ app.get('/api/categories', async (req, res) => {
   }
 });
 
-// Aktualizace kategorie (import JSON)
+// Aktualizace kategorie (import JSON) – formát: { "categories": [ {...} ] }
+// Zkoušíme POST (některé API používají POST pro update)
 app.put('/api/categories/:id', async (req, res) => {
   try {
     const base = apiUrl();
@@ -241,12 +242,92 @@ app.put('/api/categories/:id', async (req, res) => {
     if (!body || typeof body !== 'object') {
       return res.status(400).json({ error: 'Očekáván JSON objekt' });
     }
-    await request('PUT', `${base}/categories`, body);
-    res.json({ ok: true, id: id });
+    if (!Array.isArray(body.descriptions)) {
+      return res.status(400).json({ error: 'V JSON chybí pole descriptions (pole objektů).' });
+    }
+    const categoryId = body.category_id != null ? body.category_id : id;
+    const payload = { categories: [{ ...body, category_id: categoryId }] };
+    const url = `${base}/categories`;
+    console.log('[categories] PUT', url, 'category_id:', categoryId);
+    await request('PUT', url, payload);
+    res.json({ ok: true, id: categoryId });
   } catch (err) {
     console.error(err);
     const msg = formatApiError(err.body, err.message || 'Chyba API');
     res.status(err.status || 500).json({ error: msg });
+  }
+});
+
+// Seznam článků – GET {api_url}/articles
+// Parametry: id, creation_time_from, last_update_time_from, active_yn, language, category_code, with_subcategories_yn, page
+app.get('/api/content', async (req, res) => {
+  let upgatesUrl = '';
+  try {
+    const base = apiUrl();
+    const page = Math.max(1, parseInt(req.query.page, 10) || 1);
+    const limit = Math.min(5000, Math.max(1, parseInt(req.query.limit, 10) || 20));
+
+    const upgatesParams = new URLSearchParams();
+    upgatesParams.set('page', String(page));
+
+    const idsRaw = (req.query.ids ?? '').trim();
+    if (idsRaw) {
+      const idsParam = idsRaw.split(/[,;]/).map((c) => c.trim()).filter(Boolean).join(';');
+      if (idsParam) upgatesParams.set('id', idsParam);
+    }
+    if (req.query.content_id) upgatesParams.set('id', String(req.query.content_id).trim());
+    if (req.query.active_yn !== undefined && req.query.active_yn !== '') upgatesParams.set('active_yn', String(req.query.active_yn));
+    if (req.query.language) upgatesParams.set('language', String(req.query.language).trim());
+    if (req.query.creation_time_from) upgatesParams.set('creation_time_from', String(req.query.creation_time_from).trim());
+    if (req.query.last_update_time_from) upgatesParams.set('last_update_time_from', String(req.query.last_update_time_from).trim());
+    if (req.query.category_code) upgatesParams.set('category_code', String(req.query.category_code).trim());
+    if (req.query.with_subcategories_yn !== undefined && req.query.with_subcategories_yn !== '') upgatesParams.set('with_subcategories_yn', String(req.query.with_subcategories_yn));
+
+    upgatesUrl = `${base}/articles?${upgatesParams.toString()}`;
+    console.log('[content] GET', upgatesUrl);
+    const data = await request('GET', upgatesUrl);
+    const list = Array.isArray(data?.articles) ? data.articles : [];
+    const currentPage = Number(data?.current_page) ?? page;
+    const currentPageItems = Number(data?.current_page_items) ?? list.length;
+    const totalPages = Number(data?.number_of_pages) ?? 1;
+    const total = Number(data?.number_of_items) ?? list.length;
+
+    res.json({
+      items: list,
+      total,
+      page: currentPage,
+      limit: currentPageItems,
+      totalPages,
+      upstream_url: upgatesUrl,
+    });
+  } catch (err) {
+    console.error(err);
+    const msg = formatApiError(err.body, err.message || 'Chyba API');
+    const errBody = { error: msg, upstream_url: upgatesUrl };
+    res.status(err.status || 500).json(errBody);
+  }
+});
+
+// Aktualizace článku – PUT {api_url}/articles (ověř v dokumentaci)
+app.put('/api/content/:id', async (req, res) => {
+  try {
+    const base = apiUrl();
+    const id = req.params.id;
+    const body = req.body;
+    if (!body || typeof body !== 'object') {
+      return res.status(400).json({ error: 'Očekáván JSON objekt' });
+    }
+    const contentId = body.content_id != null ? body.content_id : body.id != null ? body.id : id;
+    const payload = { articles: [{ ...body, content_id: contentId }] };
+    const url = `${base}/articles`;
+    console.log('[content] PUT', url, 'content_id:', contentId);
+    await request('PUT', url, payload);
+    res.json({ ok: true, id: contentId, upstream_url: url, upstream_method: 'PUT' });
+  } catch (err) {
+    console.error(err);
+    const msg = formatApiError(err.body, err.message || 'Chyba API');
+    const url = `${apiUrl()}/articles`;
+    res.status(err.status || 500).json({ error: msg, upstream_url: url, upstream_method: 'PUT' });
   }
 });
 

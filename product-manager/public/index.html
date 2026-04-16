@@ -60,6 +60,7 @@
     <nav class="nav-menu">
       <a href="#products" class="nav-link active" data-page="products">Produkty</a>
       <a href="#pages" class="nav-link" data-page="pages">Stránky</a>
+      <a href="#content" class="nav-link" data-page="content">Content</a>
     </nav>
   </header>
 
@@ -209,13 +210,117 @@
         </div>
       </div>
     </div>
+
+    <!-- Stránka Content -->
+    <div id="page-content" class="page">
+      <h1>Content</h1>
+      <div class="toolbar">
+        <div class="filter-wrap">
+          <label for="filterContentIds">IDs:</label>
+          <input type="text" id="filterContentIds" placeholder="123; 456 nebo 123, 456">
+        </div>
+        <div class="filter-wrap">
+          <label for="filterContentId">Content ID:</label>
+          <input type="number" id="filterContentId" placeholder="ID obsahu" min="0">
+        </div>
+        <div class="filter-wrap">
+          <label for="filterContentActive">Aktivní:</label>
+          <select id="filterContentActive">
+            <option value="">Vše</option>
+            <option value="true">Ano</option>
+            <option value="false">Ne</option>
+          </select>
+        </div>
+        <div class="filter-wrap">
+          <label for="filterContentCategoryCode">Kategorie (code):</label>
+          <input type="text" id="filterContentCategoryCode" placeholder="category_code">
+        </div>
+        <div class="filter-wrap">
+          <label for="filterContentWithSubcategories">S podkategoriemi:</label>
+          <select id="filterContentWithSubcategories">
+            <option value="">—</option>
+            <option value="true">Ano</option>
+            <option value="false">Ne</option>
+          </select>
+        </div>
+        <div class="filter-wrap">
+          <label for="filterContentLanguage">Jazyk:</label>
+          <select id="filterContentLanguage">
+            <option value="">Vše</option>
+            <option value="cs">cs</option>
+            <option value="en">en</option>
+            <option value="sk">sk</option>
+          </select>
+        </div>
+        <div class="filter-wrap">
+          <label for="filterContentCreatedFrom">Vytvořeno od:</label>
+          <input type="date" id="filterContentCreatedFrom">
+        </div>
+        <div class="filter-wrap">
+          <label for="filterContentUpdatedFrom">Změněno od:</label>
+          <input type="date" id="filterContentUpdatedFrom">
+        </div>
+        <button type="button" class="btn-refresh" id="refreshContent">Načíst content</button>
+        <span class="status" id="statusContent"></span>
+      </div>
+      <div id="apiLinkContent" style="display:none; color:#9ca3af; font-size:0.8rem; margin-bottom:0.5rem; word-break:break-all;"></div>
+      <div id="apiRequestContent" style="display:none; background:#25282e; padding:0.5rem 0.75rem; border-radius:6px; margin-bottom:0.5rem; font-size:0.8rem; font-family:monospace; word-break:break-all;">
+        <strong>Poslední API dotaz:</strong><br>
+        <span id="apiRequestMethodContent"></span> <a id="apiRequestUrlContent" href="#" target="_blank" rel="noopener" style="color:#90caf9;"></a>
+      </div>
+      <div id="loadingContent" style="display:none;">Načítám…</div>
+      <div class="pagination pagination-top" id="paginationContentTop" style="display:none;">
+        <button type="button" class="btn-prev-content">← Předchozí</button>
+        <span class="page-info"></span>
+        <button type="button" class="btn-next-content">Další (stránka <span class="next-page-num">2</span>)</button>
+        <div class="limit-wrap">
+          <label>Na stránku:</label>
+          <select class="limit-select-content">
+            <option value="10">10</option>
+            <option value="20" selected>20</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="5000">5000</option>
+          </select>
+        </div>
+      </div>
+      <table id="tableContent" style="display:none;">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Název / Title</th>
+            <th>URL</th>
+            <th>Akce</th>
+          </tr>
+        </thead>
+        <tbody id="tbodyContent"></tbody>
+      </table>
+      <p id="emptyContent" style="display:none; color: #9ca3af;">Žádný content.</p>
+      <div class="pagination pagination-bottom" id="paginationContentBottom" style="display:none;">
+        <button type="button" class="btn-prev-content">← Předchozí</button>
+        <span class="page-info"></span>
+        <button type="button" class="btn-next-content">Další (stránka <span class="next-page-num">2</span>)</button>
+        <div class="limit-wrap">
+          <label>Na stránku:</label>
+          <select class="limit-select-content">
+            <option value="10">10</option>
+            <option value="20" selected>20</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="5000">5000</option>
+          </select>
+        </div>
+      </div>
+    </div>
   </main>
 
   <script>
     // === Navigace ===
     function getCurrentPage() {
       const hash = (window.location.hash || '#products').slice(1);
-      return hash === 'pages' ? 'pages' : 'products';
+      if (hash === 'pages') return 'pages';
+      if (hash === 'content') return 'content';
+      return 'products';
     }
 
     function showPage(pageId) {
@@ -231,6 +336,7 @@
       const page = getCurrentPage();
       showPage(page);
       if (page === 'pages') loadCategories(1);
+      if (page === 'content') loadContent(1);
     }
 
     window.addEventListener('hashchange', handleNavigation);
@@ -626,6 +732,212 @@
         const v = sel.value;
         limitSelectsCat.forEach(s => { if (s !== sel) s.value = v; });
         loadCategories(1);
+      });
+    });
+
+    // === Content ===
+    const refreshContentBtn = document.getElementById('refreshContent');
+    const statusContentEl = document.getElementById('statusContent');
+    const loadingContentEl = document.getElementById('loadingContent');
+    const tableContentEl = document.getElementById('tableContent');
+    const tbodyContent = document.getElementById('tbodyContent');
+    const emptyContentEl = document.getElementById('emptyContent');
+    const paginationContentTopEl = document.getElementById('paginationContentTop');
+    const paginationContentBottomEl = document.getElementById('paginationContentBottom');
+    const limitSelectsContent = document.querySelectorAll('.limit-select-content');
+
+    let currentPageContent = 1;
+
+    function setStatusContent(msg, type) {
+      statusContentEl.textContent = msg;
+      statusContentEl.className = 'status ' + (type || '');
+    }
+
+    function showApiRequestContent(method, url) {
+      var el = document.getElementById('apiRequestContent');
+      var urlEl = document.getElementById('apiRequestUrlContent');
+      document.getElementById('apiRequestMethodContent').textContent = method;
+      urlEl.textContent = url;
+      urlEl.href = url || '#';
+      el.style.display = 'block';
+    }
+
+    function getContentTitle(item) {
+      const d = (item.descriptions || [])[0];
+      if (d && (d.title || d.name)) return d.title || d.name;
+      return item.name || item.title || item.seo_url || item.article_id || item.content_id || item.id || '—';
+    }
+
+    function getContentUrl(item) {
+      const d = (item.descriptions || [])[0];
+      return (d && d.url) || item.url || '—';
+    }
+
+    function renderContentRows(list) {
+      tbodyContent.innerHTML = '';
+      if (!list.length) {
+        tableContentEl.style.display = 'none';
+        emptyContentEl.style.display = 'block';
+        paginationContentTopEl.style.display = 'none';
+        paginationContentBottomEl.style.display = 'none';
+        return;
+      }
+      tableContentEl.style.display = 'table';
+      emptyContentEl.style.display = 'none';
+      paginationContentTopEl.style.display = 'flex';
+      paginationContentBottomEl.style.display = 'flex';
+      list.forEach(function(item) {
+        const id = (item.article_id != null ? item.article_id : (item.content_id != null ? item.content_id : (item.id != null ? item.id : '—')));
+        const tr = document.createElement('tr');
+        tr.innerHTML = '<td class="code">' + escapeHtml(String(id)) + '</td><td>' + escapeHtml(getContentTitle(item)) + '</td><td>' + escapeHtml(getContentUrl(item)) + '</td><td><div class="actions"><button type="button" class="btn-export" data-id="' + escapeHtml(String(id)) + '">Export JSON</button><span class="btn-import"><button type="button">Import JSON</button><input type="file" accept=".json" data-id="' + escapeHtml(String(id)) + '"></span></div></td>';
+        tr.querySelector('.btn-export').addEventListener('click', function() { exportContent(id); });
+        tr.querySelector('input[type="file"]').addEventListener('change', function(e) { importContent(e, id); });
+        tbodyContent.appendChild(tr);
+      });
+    }
+
+    function updateContentPagination(data) {
+      const page = (data && data.page != null) ? Number(data.page) : 1;
+      const total = (data && data.total != null) ? Number(data.total) : 0;
+      currentPageContent = page;
+      document.querySelectorAll('#page-content .page-info').forEach(function(el) { el.textContent = 'Stránka ' + page + (total ? ' (celkem ' + total + ' položek)' : ''); });
+      document.querySelectorAll('.btn-prev-content').forEach(function(el) { el.disabled = page <= 1; });
+      document.querySelectorAll('.btn-next-content').forEach(function(el) { el.disabled = false; });
+      document.querySelectorAll('#page-content .next-page-num').forEach(function(el) { el.textContent = String(page + 1); });
+    }
+
+    async function loadContent(page) {
+      loadingContentEl.style.display = 'block';
+      setStatusContent('');
+      const limitEl = limitSelectsContent[0];
+      const limit = parseInt(limitEl.value, 10) || 20;
+      const params = new URLSearchParams({ page: String(page), limit: String(limit), _: String(Date.now()) });
+      const ids = document.getElementById('filterContentIds').value.trim();
+      if (ids) params.set('ids', ids);
+      const contentId = document.getElementById('filterContentId').value.trim();
+      if (contentId) params.set('content_id', contentId);
+      const active = document.getElementById('filterContentActive').value;
+      if (active) params.set('active_yn', active);
+      const categoryCode = document.getElementById('filterContentCategoryCode').value.trim();
+      if (categoryCode) params.set('category_code', categoryCode);
+      const withSub = document.getElementById('filterContentWithSubcategories').value;
+      if (withSub) params.set('with_subcategories_yn', withSub);
+      const lang = document.getElementById('filterContentLanguage').value.trim();
+      if (lang) params.set('language', lang);
+      const createdFrom = document.getElementById('filterContentCreatedFrom').value;
+      if (createdFrom) params.set('creation_time_from', createdFrom);
+      const updatedFrom = document.getElementById('filterContentUpdatedFrom').value;
+      if (updatedFrom) params.set('last_update_time_from', updatedFrom);
+      const fetchUrl = window.location.origin + '/api/content?' + params.toString();
+      document.getElementById('apiRequestContent').style.display = 'none';
+      try {
+        const r = await fetch(fetchUrl, { cache: 'no-store' });
+        if (!r.ok) {
+          const err = await r.json().catch(function() { return {}; });
+          if (err.upstream_url) showApiRequestContent('GET', err.upstream_url);
+          const msg = typeof err.error === 'string' ? err.error : ((err.error && err.error.messages) ? err.error.messages.join('; ') : (err.error ? JSON.stringify(err.error) : r.statusText));
+          throw new Error(msg || 'Chyba načtení');
+        }
+        const raw = await r.json();
+        const isPaginated = raw && typeof raw.total === 'number' && Array.isArray(raw.items);
+        const list = isPaginated ? raw.items : (Array.isArray(raw) ? raw : []);
+        const data = isPaginated ? raw : { items: list, total: list.length, page: 1, limit: list.length || 20, totalPages: 1 };
+        renderContentRows(list);
+        updateContentPagination(data);
+        const total = Number(data.total) || 0;
+        const pageNum = Number(data.page) || 1;
+        const limitNum = Number(data.limit) || 20;
+        const from = total === 0 ? 0 : (pageNum - 1) * limitNum + 1;
+        const to = total === 0 ? 0 : Math.min(from + list.length - 1, total);
+        const upstream = raw.upstream_url ? raw.upstream_url : '';
+        if (upstream) {
+          showApiRequestContent('GET', upstream);
+          document.getElementById('apiRequestContent').style.display = 'block';
+        }
+        const apiLinkEl = document.getElementById('apiLinkContent');
+        if (upstream) {
+          apiLinkEl.style.display = 'block';
+          apiLinkEl.innerHTML = 'API: <a href="' + upstream.replace(/"/g, '&quot;') + '" target="_blank" rel="noopener" style="color:#90caf9;">' + escapeHtml(upstream) + '</a>';
+        } else {
+          apiLinkEl.style.display = 'none';
+        }
+        setStatusContent('Zobrazeno ' + from + '–' + to + ' z ' + total + ' položek.', 'success');
+      } catch (e) {
+        const errMsg = typeof e.message === 'string' ? e.message : (e.message ? JSON.stringify(e.message) : 'Chyba');
+        setStatusContent(errMsg, 'error');
+        renderContentRows([]);
+        paginationContentTopEl.style.display = 'none';
+        paginationContentBottomEl.style.display = 'none';
+        if (document.getElementById('apiRequestUrlContent').href && document.getElementById('apiRequestUrlContent').href !== '#') {
+          document.getElementById('apiRequestContent').style.display = 'block';
+        }
+      } finally {
+        loadingContentEl.style.display = 'none';
+      }
+    }
+
+    async function exportContent(contentId) {
+      setStatusContent('Exportuji…');
+      try {
+        const r = await fetch('/api/content?content_id=' + encodeURIComponent(contentId));
+        if (!r.ok) throw new Error('Content nenalezen');
+        const data = await r.json();
+        const item = (data.items && data.items[0]) ? data.items[0] : null;
+        if (!item) throw new Error('Content nenalezen');
+        const blob = new Blob([JSON.stringify(item, null, 2)], { type: 'application/json' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'content-' + contentId + '.json';
+        a.click();
+        URL.revokeObjectURL(a.href);
+        setStatusContent('Export: content-' + contentId + '.json', 'success');
+      } catch (e) {
+        setStatusContent(e.message || 'Export selhal', 'error');
+      }
+    }
+
+    async function importContent(ev, contentId) {
+      const file = ev.target.files[0];
+      if (!file) return;
+      setStatusContent('Nahrávám…');
+      try {
+        const text = await file.text();
+        const body = JSON.parse(text);
+        const r = await fetch('/api/content/' + contentId, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body),
+        });
+        var resData = await r.json().catch(function() { return {}; });
+        if (!r.ok) {
+          if (resData.upstream_url) showApiRequestContent(resData.upstream_method || 'PUT', resData.upstream_url);
+          const msg = typeof resData.error === 'string' ? resData.error : ((resData.error && resData.error.messages) ? resData.error.messages.join('; ') : (resData.error ? JSON.stringify(resData.error) : r.statusText));
+          throw new Error(msg || 'Chyba nahrání');
+        }
+        if (resData.upstream_url) showApiRequestContent(resData.upstream_method || 'PUT', resData.upstream_url);
+        setStatusContent('Import dokončen. Obnovte seznam.', 'success');
+        ev.target.value = '';
+      } catch (e) {
+        setStatusContent(typeof e.message === 'string' ? e.message : 'Import selhal', 'error');
+        ev.target.value = '';
+      }
+    }
+
+    refreshContentBtn.addEventListener('click', function() { loadContent(1); });
+    document.querySelectorAll('#page-content .filter-wrap input:not([type="file"]), #page-content .filter-wrap select').forEach(function(el) {
+      el.addEventListener('keydown', function(e) { if (e.key === 'Enter') loadContent(1); });
+    });
+    document.querySelectorAll('.btn-prev-content').forEach(function(btn) {
+      btn.addEventListener('click', function() { loadContent(Math.max(1, currentPageContent - 1)); });
+    });
+    document.querySelectorAll('.btn-next-content').forEach(function(btn) {
+      btn.addEventListener('click', function() { loadContent(currentPageContent + 1); });
+    });
+    limitSelectsContent.forEach(function(sel) {
+      sel.addEventListener('change', function() {
+        var v = sel.value;
+        limitSelectsContent.forEach(function(s) { if (s !== sel) s.value = v; });
+        loadContent(1);
       });
     });
   </script>

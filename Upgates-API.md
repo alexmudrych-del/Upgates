@@ -32,6 +32,8 @@ Backend volá pouze tyto endpointy.
 | GET | `{api_url}/products/code?codes=...` | Seznam produktů podle kódů. Parametr `codes`: jeden kód nebo více oddělených **středníkem** (např. `PS600` nebo `PS600;PS601`). |
 | PUT | `{api_url}/products` | Aktualizace produktu. Body = `{ "products": [ { "product_id", "code", "descriptions" } ] }`. (Reference: upload_product.ps1) |
 | GET | `{api_url}/categories` | Seznam kategorií (stránky jsou součástí obsahu kategorií). |
+| GET | `{api_url}/articles` | Seznam článků. Parametry: `id`, `creation_time_from`, `last_update_time_from`, `active_yn`, `language`, `category_code`, `with_subcategories_yn`, `page`. |
+| PUT | `{api_url}/articles` | Aktualizace článku. Body = `{ "articles": [ {...} ] }`. |
 
 **Příklad (správný link):** `https://airteam.admin.s7.upgates.com/api/v2/products/code?codes=PS600;PS601`
 
@@ -183,6 +185,26 @@ Klient
 | `exclude_from_search_yn` | bool | Vyřadit z vyhledávání. |
 
 **Odpověď 200:** Stejný formát jako `/api/products` (`items`, `total`, `page`, `limit`, `totalPages`).
+
+---
+
+### 6.2 PUT /api/categories/:id
+
+**Účel:** Aktualizace kategorie (včetně stránek) v Upgates. Tělo požadavku se předává beze změny na `PUT {api_url}/categories`.
+
+**Chování:** Server nekontroluje schéma těla; celý `body` se přepošle do Upgates API.
+
+**Známý problém:** API může vracet 200 OK, ale data se v Upgates neaplikují. Možné příčiny: jiný formát payloadu, cache v Upgates, nebo API vyžaduje specifická pole. Ověřit v [Upgates API v2 – Aktualizace kategorie](https://upgatesapiv2.docs.apiary.io/#reference/kategorie/kategorie/aktualizace-kategorie) přesné schéma a povinná pole.
+
+---
+
+### 6.3 GET /api/content a PUT /api/content/:id
+
+**Účel:** Seznam a aktualizace článků/news. Struktura jako u kategorií – filtry, stránkování, export/import JSON.
+
+**Reference:** [Upgates API v2 – Články](https://upgatesapiv2.docs.apiary.io/#reference/clanky/clanky/seznam-clanku)
+
+**Reference:** [Upgates API v2 – Články](https://upgatesapiv2.docs.apiary.io/#reference/clanky/clanky/seznam-clanku)
 
 ---
 

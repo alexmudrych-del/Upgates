@@ -2,3 +2,4 @@
 upgates_credentials.json
 *.env
 .env*
+Translations/
